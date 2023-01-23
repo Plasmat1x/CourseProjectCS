@@ -2,7 +2,7 @@
 
 TOP ACADEMY
 Made by Plasmat1x (damaghack@gmail.com)
-Chosen task №___
+Chosen task №1
 
 ## Tasks
 

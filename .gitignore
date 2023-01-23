@@ -1,3 +1,8 @@
+#Folders
 .inner
 App/obj
 App/bin
+
+#Files
+*.drawio.*
+*.drawio.*

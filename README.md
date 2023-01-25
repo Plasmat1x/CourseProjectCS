@@ -1,35 +1,19 @@
-# Course project
+# Курсовой проект 
 
 TOP ACADEMY
 Made by Plasmat1x (damaghack@gmail.com)
-Chosen task №1
 
-## Tasks
+С использованием:
 
-## Task 1
+* C#
+* .NET
+* ADO.NET
+* Microsoft SQL
+
+## Задание
 
 ![Screenshot](tasks/1.jpg)
 
-## Task 2
+## Доп-ы
 
-![Screenshot](tasks/2.jpg)
-
-## Task 3
-
-![Screenshot](tasks/3.jpg)
-
-## Task 4
-
-![Screenshot](tasks/4.jpg)
-
-## Task 5
-
-![Screenshot](tasks/5.jpg)
-
-## Task 6
-
-![Screenshot](tasks/6.jpg)
-
-## Task 7
-
-![Screenshot](tasks/7.jpg)
+![Screenshot](UML.png)

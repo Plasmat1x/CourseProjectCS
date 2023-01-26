@@ -1,4 +1,4 @@
-# Курсовой проект  
+# Курсовой проект
 
 TOP ACADEMY
 Made by Plasmat1x (damaghack@gmail.com)

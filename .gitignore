@@ -3,6 +3,8 @@
 App/obj
 App/bin
 .vs
+.vscode
 
 #Files
 *.drawio.*
+*.ipynb

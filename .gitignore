@@ -6,6 +6,6 @@ App/bin
 .vscode
 
 #Files
-*.drawio.*
+*.drawio.bkp
 *.ipynb
 *.code-workspace

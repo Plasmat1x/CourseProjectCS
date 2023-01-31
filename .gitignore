@@ -8,3 +8,4 @@ App/bin
 #Files
 *.drawio.*
 *.ipynb
+*.code-workspace

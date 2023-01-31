@@ -17,3 +17,5 @@ Made by Plasmat1x (damaghack@gmail.com)
 ## Доп-ы
 
 ![Screenshot](UML.png)
+
+![Diagram](UML.drawio.svg)

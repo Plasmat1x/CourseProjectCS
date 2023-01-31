@@ -8,14 +8,13 @@ Made by Plasmat1x (damaghack@gmail.com)
 * C#
 * .NET
 * ADO.NET
-* Microsoft SQL
+* Microsoft SQL database
+* EntityFramework
 
 ## Задание
 
 ![Screenshot](tasks/1.jpg)
 
 ## Доп-ы
-
-![Screenshot](UML.png)
 
 ![Diagram](UML.drawio.svg)

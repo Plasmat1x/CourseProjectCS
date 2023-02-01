@@ -11,6 +11,7 @@ Made by Mikhail Mryasov (damaghack@gmail.com)
 * ADO.NET
 * Microsoft SQL database
 * EntityFramework
+* WindowsForms
 
 ### Платформа
 

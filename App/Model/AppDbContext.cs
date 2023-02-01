@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
+using System.Xml.Linq;
+using System.Data.Entity.Infrastructure;
+using System.ComponentModel;
 
 namespace CourseProject.Model.CF
 {
@@ -12,6 +15,11 @@ namespace CourseProject.Model.CF
         public static AppDbContext Instance { get => AppDbContextCreate.instance; }
 
         private AppDbContext() : base("DefaultConnection") { }
+
+        public AppDbContext Create()
+        {
+            throw new NotImplementedException();
+        }
 
         private class AppDbContextCreate
         {
@@ -26,5 +34,6 @@ namespace CourseProject.Model.CF
         public DbSet<Fail> Fails { get; set; }
         public DbSet<Quantity> Quantities { get; set; }
         public DbSet<Selling> Sellings { get; set; }
+        public DbSet<ItemCountry> ItemCountries { get; set; }
     }
 }

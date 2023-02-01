@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace CourseProject.Model
 {
-    public class Quantity
+    public class Country
     {
         public int Id { get; set; }
-        public int Amount { get; set; }
+        public string Name { get; set; }
+
+        public virtual ICollection<ItemCountry> ItemCountries { get; set; }
     }
 }

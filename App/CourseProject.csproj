@@ -59,12 +59,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controll\BuisnessLogic.cs" />
+    <Compile Include="Model\AppDbContext.cs" />
     <Compile Include="Model\Country.cs" />
     <Compile Include="Model\Fail.cs" />
     <Compile Include="Model\Item.cs" />
-    <Compile Include="Model\Item_Country.cs" />
+    <Compile Include="Model\ItemCountry.cs" />
     <Compile Include="Model\Maker.cs" />
-    <Compile Include="Model\Model.cs" />
     <Compile Include="Model\Quantity.cs" />
     <Compile Include="Model\Selling.cs" />
     <Compile Include="Model\Type.cs" />

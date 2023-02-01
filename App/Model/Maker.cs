@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace CourseProject.Model
 {
-    public class Type
+    public class Maker
     {
         public int Id { get; set; }
         public string Name { get; set; }
+
+        public virtual ICollection<Item> Items { get; set; }
     }
 }

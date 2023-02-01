@@ -1,7 +1,5 @@
 USE CourseProjectCStest;
 
---[Id] INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
-
 CREATE TABLE Makers(
     [Id] INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
     [Name] NVARCHAR(50),

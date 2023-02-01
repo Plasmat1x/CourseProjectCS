@@ -9,21 +9,22 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Sql;
 using System.Data.SqlClient;
+using CourseProject.Model.DBF;
 
 namespace CourseProject
 { 
     public partial class MainForm : Form
     {
-       
+        DBFConnection connection;
         public MainForm()
         {
             InitializeComponent();
-            initElements();
+            initElements();  
         }
 
         private void initElements()
         {
-           
+            connection = new DBFConnection();
         }
     }
 }

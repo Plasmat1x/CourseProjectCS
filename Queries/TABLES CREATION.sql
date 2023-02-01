@@ -26,22 +26,26 @@ CREATE TABLE Items(
 );
 
 CREATE TABLE Sellings(
+    [Id] INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
     [ItemId] INT FOREIGN KEY REFERENCES Items(Id) NOT NULL,
     [Date] DATE,
 );
 
-CREATE TABLE ItemCountry(
-    [Id] INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
-    [ItemId] INT FOREIGN KEY REFERENCES Items(Id) NOT NULL,
-    [CountryId] INT FOREIGN KEY REFERENCES Countries(Id) NOT NULL,
-);
-
 CREATE TABLE Fails(
-    [ItemCountryId] INT FOREIGN KEY REFERENCES ItemCountry(Id),
+    [Id] INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
     [Quantity] INT,
 );
 
 CREATE TABLE Quantities(
-    [ItemCountryId] INT FOREIGN KEY REFERENCES ItemCountry(Id),
+    [Id] INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
     [Quantity] INT,
 )
+
+CREATE TABLE ItemCountry(
+    [ItemId] INT FOREIGN KEY REFERENCES Items(Id) NOT NULL,
+    [CountryId] INT FOREIGN KEY REFERENCES Countries(Id) NOT NULL,
+    [QuantityId] INT FOREIGN KEY REFERENCES Quantities(Id),
+    [FailsId] INT FOREIGN KEY REFERENCES Fails(Id),
+    CONSTRAINT [ItemCountryId] PRIMARY KEY (ItemId, CountryId),
+);
+

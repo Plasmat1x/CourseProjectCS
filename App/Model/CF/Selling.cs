@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace CourseProject.Model
 {
-    public class Fail
+    public class Selling
     {
-        public ItemCountry ItemCountry { get; set; }
-        public int Quantity { get; set; }
+        public int Id { get; set; }
+        public Item Item { get; set; }
+        public DateTime Date { get; set; }
     }
 }

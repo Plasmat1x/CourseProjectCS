@@ -1,0 +1,81 @@
+--create database TaskLearnPlatform;
+use TaskLearnPlatform;
+--create table Groups
+--(
+--	[Id] int not null primary key identity(1,1),
+--	[GroupName] nvarchar(50),
+--);
+--insert into Groups
+--values
+--('First Group'),
+--('Second Group'),
+--('Third Group');
+--create table Students
+--(
+--	[Id]int not null primary key identity(1,1),
+--	[FirstName] nvarchar(50),
+--	[LastName] nvarchar(50),
+--	[Group_FK] int foreign key(Group_FK) references Groups(Id)
+--);
+--insert into Students
+--values
+--('S1','S1LN',1),
+--('S2','S2LN',1),
+--('S3','S3LN',2),
+--('S4','S4LN',2),
+--('S5','S5LN',2),
+--('S6','S6LN',3),
+--('S7','S7LN',3),
+--('S8','S8LN',1),
+--('S9','S9LN',3);
+--create table Subjects
+--(
+--	[Id] int not null primary key identity(1,1),
+--	[SubjectName] nvarchar(50)
+--);
+--insert into Subjects
+--values
+--('Math'),
+--('History'),
+--('English language'),
+--('Biology'),
+--('Physic');
+--create table SubjectStudent
+--(
+--	[Subject_ID] int,
+--	[Student_ID] int,
+--	Primary key(Subject_ID, Student_ID),
+--	Foreign key(Subject_ID) references Subjects(Id),
+--	Foreign key(Student_ID) references Students(Id),
+--);
+--insert into SubjectStudent
+--values
+--('1','1'),
+--('2','1'),
+--('3','1'),
+--('2','2'),
+--('3','2'),
+--('5','2'),
+--('3','3'),
+--('1','3'),
+--('2','3'),
+--('4','4'),
+--('5','4'),
+--('3','4'),
+--('5','5'),
+--('1','5'),
+--('2','5'),
+--('3','5'),
+--('4','5'),
+--('1','6'),
+--('3','6'),
+--('4','6'),
+--('2','7'),
+--('5','7'),
+--('1','7'),
+--('3','8'),
+--('1','8'),
+--('4','8'),
+--('4','9'),
+--('2','9'),
+--('5','9');

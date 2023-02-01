@@ -1,0 +1,37 @@
+﻿use TaskLearnPlatform;
+--Вывести всех студентов и группы, в которых они учатся
+--select FirstName, LastName, GroupName from Students
+--inner join Groups on Students.Group_FK = Groups.Id
+--group by GroupName, FirstName , LastName;
+
+--Вывести всех студентов и предметы, которые эти студенты изучают​
+--select FirstName, LastName, SubjectName
+--from Students
+--inner join SubjectStudent as SubS on Students.Id = SubS.Student_ID
+--inner join Subjects on Subjects.Id = SubS.Subject_ID
+--group by SubjectName, FirstName, LastName;
+--order by FirstName; 
+--Вывести студентов, кто изучает математику или биологию
+--select FirstName, LastName, SubjectName from Students
+--inner join SubjectStudent as SubS on Students.Id = SubS.Student_ID
+--inner join Subjects on SubS.Subject_ID = Subjects.Id
+--where SubjectName = 'Math' 
+--OR SubjectName = 'Physic';
+--Вывести все предметы студента с Id = 2
+--select FirstName, LastName, SubjectName from Students
+--inner join SubjectStudent SubS on SubS.Student_ID = Students.Id
+--inner join Subjects on Subjects.Id = SubS.Subject_ID
+--where Student_ID = 2;
+--Вывести студента с самым большим кол-ом предметов​
+--1.Вывести студентов и кол-во предметов у каждого студента
+--2.Вывести студента с самым большим кол-вом предметов
+--distinct
+--select Top 1 FirstName, LastName, (select count(Subject_ID) from SubjectStudent 
+--											where Student_ID = Students.Id) as SN from Students
+--order by SN desc;
+
+--select FirstName, LastName, SubjectName, Marks.Mark from Students
+--inner join SubjectStudent SubS on SubS.Student_ID = Students.Id
+--inner join Subjects on Subjects.Id = SubS.Subject_ID
+--inner join Marks on Marks.Id = SubS.Mark_ID
+--order by Mark desc;

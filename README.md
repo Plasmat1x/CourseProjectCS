@@ -2,7 +2,7 @@
 
 ## TOP ACADEMY
 
-Made by Plasmat1x (damaghack@gmail.com)
+Made by Mikhail Mryasov (damaghack@gmail.com)
 
 С использованием:
 
@@ -49,4 +49,8 @@ Made by Plasmat1x (damaghack@gmail.com)
 
 ## Диаграмма
 
-![Diagram](UML.drawio.svg)
+![Diagram](resources/UML.drawio.svg)
+
+## Визуализация
+
+![Screenshot](resources/MainWindow.png)

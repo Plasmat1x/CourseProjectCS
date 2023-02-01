@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Sql;
 using System.Data.SqlClient;
-using WFATestZone;
 
 namespace CourseProject
 { 
@@ -25,16 +24,6 @@ namespace CourseProject
         private void initElements()
         {
            
-        }
-
-        private void search(object sender, EventArgs e)
-        {
-
-        }
-
-        private void priceTo_ValueChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

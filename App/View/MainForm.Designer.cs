@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.tablegrid = new System.Windows.Forms.DataGridView();
-            this.SortGB = new System.Windows.Forms.GroupBox();
+            this.sort = new System.Windows.Forms.GroupBox();
             this.rbDescening = new System.Windows.Forms.RadioButton();
             this.rbAscending = new System.Windows.Forms.RadioButton();
             this.showBT = new System.Windows.Forms.Button();
             this.categoryCB = new System.Windows.Forms.ComboBox();
-            this.ShowGB = new System.Windows.Forms.GroupBox();
+            this.output = new System.Windows.Forms.GroupBox();
             this.ControlPanel = new System.Windows.Forms.Panel();
             this.cbMakers = new System.Windows.Forms.CheckedListBox();
             this.PriceRangeBox = new System.Windows.Forms.GroupBox();
@@ -55,8 +55,8 @@
             this.dateTo = new System.Windows.Forms.DateTimePicker();
             this.dateFrom = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.tablegrid)).BeginInit();
-            this.SortGB.SuspendLayout();
-            this.ShowGB.SuspendLayout();
+            this.sort.SuspendLayout();
+            this.output.SuspendLayout();
             this.ControlPanel.SuspendLayout();
             this.PriceRangeBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.priceFrom)).BeginInit();
@@ -76,26 +76,26 @@
             this.tablegrid.Size = new System.Drawing.Size(1042, 681);
             this.tablegrid.TabIndex = 0;
             // 
-            // SortGB
+            // sort
             // 
-            this.SortGB.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.SortGB.Controls.Add(this.rbDescening);
-            this.SortGB.Controls.Add(this.rbAscending);
-            this.SortGB.Location = new System.Drawing.Point(6, 48);
-            this.SortGB.Name = "SortGB";
-            this.SortGB.Size = new System.Drawing.Size(196, 76);
-            this.SortGB.TabIndex = 1;
-            this.SortGB.TabStop = false;
-            this.SortGB.Text = "Сортировка по";
+            this.sort.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.sort.Controls.Add(this.rbDescening);
+            this.sort.Controls.Add(this.rbAscending);
+            this.sort.Location = new System.Drawing.Point(6, 48);
+            this.sort.Name = "sort";
+            this.sort.Size = new System.Drawing.Size(196, 76);
+            this.sort.TabIndex = 1;
+            this.sort.TabStop = false;
+            this.sort.Text = "Order by";
             // 
             // rbDescening
             // 
             this.rbDescening.AutoSize = true;
             this.rbDescening.Location = new System.Drawing.Point(6, 42);
             this.rbDescening.Name = "rbDescening";
-            this.rbDescening.Size = new System.Drawing.Size(76, 17);
+            this.rbDescening.Size = new System.Drawing.Size(80, 17);
             this.rbDescening.TabIndex = 1;
-            this.rbDescening.Text = "убыванию";
+            this.rbDescening.Text = "descending";
             this.rbDescening.UseVisualStyleBackColor = true;
             // 
             // rbAscending
@@ -104,10 +104,10 @@
             this.rbAscending.Checked = true;
             this.rbAscending.Location = new System.Drawing.Point(6, 19);
             this.rbAscending.Name = "rbAscending";
-            this.rbAscending.Size = new System.Drawing.Size(92, 17);
+            this.rbAscending.Size = new System.Drawing.Size(74, 17);
             this.rbAscending.TabIndex = 0;
             this.rbAscending.TabStop = true;
-            this.rbAscending.Text = "возростанию";
+            this.rbAscending.Text = "ascengind";
             this.rbAscending.UseVisualStyleBackColor = true;
             // 
             // showBT
@@ -128,17 +128,17 @@
             this.categoryCB.Size = new System.Drawing.Size(196, 21);
             this.categoryCB.TabIndex = 3;
             // 
-            // ShowGB
+            // output
             // 
-            this.ShowGB.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ShowGB.Controls.Add(this.categoryCB);
-            this.ShowGB.Controls.Add(this.SortGB);
-            this.ShowGB.Location = new System.Drawing.Point(6, 472);
-            this.ShowGB.Name = "ShowGB";
-            this.ShowGB.Size = new System.Drawing.Size(212, 130);
-            this.ShowGB.TabIndex = 4;
-            this.ShowGB.TabStop = false;
-            this.ShowGB.Text = "Вывод";
+            this.output.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.output.Controls.Add(this.categoryCB);
+            this.output.Controls.Add(this.sort);
+            this.output.Location = new System.Drawing.Point(6, 472);
+            this.output.Name = "output";
+            this.output.Size = new System.Drawing.Size(212, 130);
+            this.output.TabIndex = 4;
+            this.output.TabStop = false;
+            this.output.Text = "Output";
             // 
             // ControlPanel
             // 
@@ -152,7 +152,7 @@
             this.ControlPanel.Controls.Add(this.cbType);
             this.ControlPanel.Controls.Add(this.cbMakers);
             this.ControlPanel.Controls.Add(this.showBT);
-            this.ControlPanel.Controls.Add(this.ShowGB);
+            this.ControlPanel.Controls.Add(this.output);
             this.ControlPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.ControlPanel.Location = new System.Drawing.Point(1041, 0);
             this.ControlPanel.Name = "ControlPanel";
@@ -205,7 +205,6 @@
             this.priceTo.Name = "priceTo";
             this.priceTo.Size = new System.Drawing.Size(120, 20);
             this.priceTo.TabIndex = 0;
-            this.priceTo.ValueChanged += new System.EventHandler(this.priceTo_ValueChanged);
             // 
             // label1
             // 
@@ -275,7 +274,6 @@
             this.weightTo.Name = "weightTo";
             this.weightTo.Size = new System.Drawing.Size(120, 20);
             this.weightTo.TabIndex = 0;
-            this.weightTo.ValueChanged += new System.EventHandler(this.priceTo_ValueChanged);
             // 
             // wheightFrom
             // 
@@ -329,6 +327,7 @@
             // 
             // dateTo
             // 
+            this.dateTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTo.Location = new System.Drawing.Point(82, 45);
             this.dateTo.Name = "dateTo";
             this.dateTo.Size = new System.Drawing.Size(120, 20);
@@ -336,6 +335,7 @@
             // 
             // dateFrom
             // 
+            this.dateFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateFrom.Location = new System.Drawing.Point(82, 18);
             this.dateFrom.Name = "dateFrom";
             this.dateFrom.Size = new System.Drawing.Size(120, 20);
@@ -355,9 +355,9 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "MainForm";
             ((System.ComponentModel.ISupportInitialize)(this.tablegrid)).EndInit();
-            this.SortGB.ResumeLayout(false);
-            this.SortGB.PerformLayout();
-            this.ShowGB.ResumeLayout(false);
+            this.sort.ResumeLayout(false);
+            this.sort.PerformLayout();
+            this.output.ResumeLayout(false);
             this.ControlPanel.ResumeLayout(false);
             this.ControlPanel.PerformLayout();
             this.PriceRangeBox.ResumeLayout(false);
@@ -377,12 +377,12 @@
         #endregion
 
         private System.Windows.Forms.DataGridView tablegrid;
-        private System.Windows.Forms.GroupBox SortGB;
+        private System.Windows.Forms.GroupBox sort;
         private System.Windows.Forms.RadioButton rbDescening;
         private System.Windows.Forms.RadioButton rbAscending;
         private System.Windows.Forms.Button showBT;
         private System.Windows.Forms.ComboBox categoryCB;
-        private System.Windows.Forms.GroupBox ShowGB;
+        private System.Windows.Forms.GroupBox output;
         private System.Windows.Forms.Panel ControlPanel;
         private System.Windows.Forms.GroupBox PriceRangeBox;
         private System.Windows.Forms.NumericUpDown priceTo;

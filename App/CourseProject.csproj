@@ -7,8 +7,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{B5F2A994-88BE-465D-98C6-2EA1B108347D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WFATestZone</RootNamespace>
-    <AssemblyName>WFATestZone</AssemblyName>
+    <RootNamespace>CourseProject</RootNamespace>
+    <AssemblyName>CourseProject</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -58,8 +58,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataBaseService.cs" />
+    <Compile Include="Controll\BuisnessLogic.cs" />
+    <Compile Include="Model\Country.cs" />
+    <Compile Include="Model\Fail.cs" />
+    <Compile Include="Model\Item.cs" />
+    <Compile Include="Model\Item_Country.cs" />
+    <Compile Include="Model\Maker.cs" />
     <Compile Include="Model\Model.cs" />
+    <Compile Include="Model\Quantity.cs" />
+    <Compile Include="Model\Selling.cs" />
+    <Compile Include="Model\Type.cs" />
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +87,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -94,7 +103,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

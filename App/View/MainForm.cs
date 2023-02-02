@@ -23,8 +23,7 @@ namespace CourseProject
 
         private void initElements()
         {
-            AppDbContext.Instance.Makers.Add(new Model.Maker { Name = "Samsung" });
-            AppDbContext.Instance.SaveChanges();
+
         }
     }
 }

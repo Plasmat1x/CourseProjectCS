@@ -16,11 +16,6 @@ namespace CourseProject.Model.CF
 
         private AppDbContext() : base("DefaultConnection") { }
 
-        public AppDbContext Create()
-        {
-            throw new NotImplementedException();
-        }
-
         private class AppDbContextCreate
         {
             static AppDbContextCreate() { }

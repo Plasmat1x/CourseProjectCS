@@ -15,23 +15,28 @@ namespace CourseProject.View
     public partial class TypeForm : Form
     {
         AppDbContext context = new AppDbContext();
+
+        Model.Type current;
+
         public TypeForm()
         {
             InitializeComponent();
 
-            var types = context.Types.ToList();
-            ItemsGrid.DataSource = types;
-            ItemsGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            UpdateForm();
         }
 
         private void btAdd_Click(object sender, EventArgs e)
         {
-            
+            context.Types.Add(new Model.Type { Name = tbName.Text });
+            context.SaveChanges();
+            UpdateForm();
         }
 
         private void btDelete_Click(object sender, EventArgs e)
         {
-
+            context.Types.Remove(current);
+            context.SaveChanges();
+            UpdateForm();
         }
 
         private void TypeForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -41,8 +46,23 @@ namespace CourseProject.View
 
         private void ItemsGrid_SelectionChanged(object sender, EventArgs e)
         {
-            tbId.Text = "";
-            tbName.Text = "";
+            current = ((Model.Type)ItemsGrid.CurrentRow.DataBoundItem);
+
+            tbId.Text = current.Id.ToString();
+            tbName.Text = current.Name;
+        }
+
+        private void UpdateForm()
+        {
+            var types = context.Types.ToList();
+            ItemsGrid.DataSource = types;
+        }
+
+        private void btUpdate_Click(object sender, EventArgs e)
+        {
+            context.Types.FirstOrDefault(t => t.Id == current.Id).Name = tbName.Text;
+            context.SaveChanges();
+            UpdateForm();
         }
     }
 }

@@ -43,7 +43,7 @@
             // 
             // tbId
             // 
-            this.tbId.Location = new System.Drawing.Point(50, 12);
+            this.tbId.Location = new System.Drawing.Point(48, 3);
             this.tbId.Name = "tbId";
             this.tbId.ReadOnly = true;
             this.tbId.Size = new System.Drawing.Size(100, 20);
@@ -52,7 +52,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 15);
+            this.label1.Location = new System.Drawing.Point(7, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(16, 13);
             this.label1.TabIndex = 2;
@@ -61,7 +61,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 38);
+            this.label2.Location = new System.Drawing.Point(7, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 3;
@@ -69,7 +69,7 @@
             // 
             // tbName
             // 
-            this.tbName.Location = new System.Drawing.Point(50, 35);
+            this.tbName.Location = new System.Drawing.Point(48, 26);
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(100, 20);
             this.tbName.TabIndex = 4;

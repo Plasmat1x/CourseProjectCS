@@ -8,7 +8,7 @@ Made by Mikhail Mryasov (damaghack@gmail.com)
 
 * C#
 * .NET
-* ADO.NET
+* ADO .NET
 * Microsoft SQL database
 * EntityFramework
 * WindowsForms

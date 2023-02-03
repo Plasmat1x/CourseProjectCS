@@ -35,6 +35,9 @@
             this.categoryCB = new System.Windows.Forms.ComboBox();
             this.output = new System.Windows.Forms.GroupBox();
             this.ControlPanel = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btInspectItem = new System.Windows.Forms.Button();
+            this.btAddItem = new System.Windows.Forms.Button();
             this.SearchField = new System.Windows.Forms.TextBox();
             this.dateRange = new System.Windows.Forms.GroupBox();
             this.dateFrom = new System.Windows.Forms.DateTimePicker();
@@ -53,9 +56,6 @@
             this.priceFrom = new System.Windows.Forms.NumericUpDown();
             this.cbType = new System.Windows.Forms.CheckedListBox();
             this.cbMakers = new System.Windows.Forms.CheckedListBox();
-            this.btAddItem = new System.Windows.Forms.Button();
-            this.btInspectItem = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
             this.ItemPanel = new System.Windows.Forms.Panel();
             this.ItemsGrid = new System.Windows.Forms.DataGridView();
             this.sort.SuspendLayout();
@@ -157,6 +157,34 @@
             this.ControlPanel.Name = "ControlPanel";
             this.ControlPanel.Size = new System.Drawing.Size(252, 681);
             this.ControlPanel.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 14);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(33, 13);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "name";
+            // 
+            // btInspectItem
+            // 
+            this.btInspectItem.Location = new System.Drawing.Point(5, 666);
+            this.btInspectItem.Name = "btInspectItem";
+            this.btInspectItem.Size = new System.Drawing.Size(95, 23);
+            this.btInspectItem.TabIndex = 9;
+            this.btInspectItem.Text = "Incpect / modify";
+            this.btInspectItem.UseVisualStyleBackColor = true;
+            this.btInspectItem.Click += new System.EventHandler(this.btInspectItem_Click);
+            // 
+            // btAddItem
+            // 
+            this.btAddItem.Location = new System.Drawing.Point(123, 667);
+            this.btAddItem.Name = "btAddItem";
+            this.btAddItem.Size = new System.Drawing.Size(95, 23);
+            this.btAddItem.TabIndex = 8;
+            this.btAddItem.Text = "Add new item";
+            this.btAddItem.UseVisualStyleBackColor = true;
             // 
             // SearchField
             // 
@@ -339,34 +367,6 @@
             this.cbMakers.Name = "cbMakers";
             this.cbMakers.Size = new System.Drawing.Size(212, 94);
             this.cbMakers.TabIndex = 5;
-            // 
-            // btAddItem
-            // 
-            this.btAddItem.Location = new System.Drawing.Point(123, 667);
-            this.btAddItem.Name = "btAddItem";
-            this.btAddItem.Size = new System.Drawing.Size(95, 23);
-            this.btAddItem.TabIndex = 8;
-            this.btAddItem.Text = "Add new item";
-            this.btAddItem.UseVisualStyleBackColor = true;
-            // 
-            // btInspectItem
-            // 
-            this.btInspectItem.Location = new System.Drawing.Point(5, 666);
-            this.btInspectItem.Name = "btInspectItem";
-            this.btInspectItem.Size = new System.Drawing.Size(95, 23);
-            this.btInspectItem.TabIndex = 9;
-            this.btInspectItem.Text = "Incpect / modify";
-            this.btInspectItem.UseVisualStyleBackColor = true;
-            this.btInspectItem.Click += new System.EventHandler(this.btInspectItem_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 14);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(33, 13);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "name";
             // 
             // ItemPanel
             // 

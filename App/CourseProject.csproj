@@ -95,10 +95,10 @@
     <Compile Include="View\tableItemForms\CountryForm.Designer.cs">
       <DependentUpon>CountryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\tableItemForms\ItemForm.cs">
+    <Compile Include="View\ItemForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\tableItemForms\ItemForm.Designer.cs">
+    <Compile Include="View\ItemForm.Designer.cs">
       <DependentUpon>ItemForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\tableItemForms\MakerForm.cs">
@@ -144,7 +144,7 @@
     <EmbeddedResource Include="View\tableItemForms\CountryForm.resx">
       <DependentUpon>CountryForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\tableItemForms\ItemForm.resx">
+    <EmbeddedResource Include="View\ItemForm.resx">
       <DependentUpon>ItemForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\tableItemForms\MakerForm.resx">

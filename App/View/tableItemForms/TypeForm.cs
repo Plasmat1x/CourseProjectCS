@@ -39,7 +39,7 @@ namespace CourseProject.View
             UpdateForm();
         }
 
-        private void TypeForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void Form_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.DialogResult = DialogResult.OK;
         }

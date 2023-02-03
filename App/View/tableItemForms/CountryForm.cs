@@ -14,33 +14,54 @@ namespace CourseProject.View
     public partial class CountryForm : Form
     {
         AppDbContext context = new AppDbContext();
+
+        Model.Country current;
+
         public CountryForm()
         {
             InitializeComponent();
 
-            var countries = context.Countries.ToList();
-            ItemsGrid.DataSource = countries;
-            ItemsGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            UpdateForm();
         }
 
         private void btAdd_Click(object sender, EventArgs e)
         {
-
+            context.Countries.Add(new Model.Country { Name = tbName.Text });
+            context.SaveChanges();
+            UpdateForm();
         }
 
         private void btDelete_Click(object sender, EventArgs e)
         {
-
+            context.Countries.Remove(current);
+            context.SaveChanges();
+            UpdateForm();
         }
 
-        private void CountryForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void Form_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.DialogResult = DialogResult.OK;
         }
 
         private void ItemsGrid_SelectionChanged(object sender, EventArgs e)
         {
+            current = ((Model.Country)ItemsGrid.CurrentRow.DataBoundItem);
 
+            tbId.Text = current.Id.ToString();
+            tbName.Text = current.Name;
+        }
+
+        private void UpdateForm()
+        {
+            var types = context.Countries.ToList();
+            ItemsGrid.DataSource = types;
+        }
+
+        private void btUpdate_Click(object sender, EventArgs e)
+        {
+            context.Countries.FirstOrDefault(t => t.Id == current.Id).Name = tbName.Text;
+            context.SaveChanges();
+            UpdateForm();
         }
     }
 }

@@ -36,35 +36,36 @@
             this.categoryCB = new System.Windows.Forms.ComboBox();
             this.output = new System.Windows.Forms.GroupBox();
             this.ControlPanel = new System.Windows.Forms.Panel();
-            this.cbMakers = new System.Windows.Forms.CheckedListBox();
-            this.PriceRangeBox = new System.Windows.Forms.GroupBox();
-            this.priceFrom = new System.Windows.Forms.NumericUpDown();
-            this.priceTo = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbType = new System.Windows.Forms.CheckedListBox();
+            this.SearchField = new System.Windows.Forms.TextBox();
+            this.dateRange = new System.Windows.Forms.GroupBox();
+            this.dateFrom = new System.Windows.Forms.DateTimePicker();
+            this.dateTo = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.weightRange = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.weightTo = new System.Windows.Forms.NumericUpDown();
             this.wheightFrom = new System.Windows.Forms.NumericUpDown();
-            this.SearchField = new System.Windows.Forms.TextBox();
-            this.dateRange = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dateTo = new System.Windows.Forms.DateTimePicker();
-            this.dateFrom = new System.Windows.Forms.DateTimePicker();
+            this.PriceRangeBox = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.priceTo = new System.Windows.Forms.NumericUpDown();
+            this.priceFrom = new System.Windows.Forms.NumericUpDown();
+            this.cbType = new System.Windows.Forms.CheckedListBox();
+            this.cbMakers = new System.Windows.Forms.CheckedListBox();
+            this.testForm = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tablegrid)).BeginInit();
             this.sort.SuspendLayout();
             this.output.SuspendLayout();
             this.ControlPanel.SuspendLayout();
-            this.PriceRangeBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.priceFrom)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.priceTo)).BeginInit();
+            this.dateRange.SuspendLayout();
             this.weightRange.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.weightTo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wheightFrom)).BeginInit();
-            this.dateRange.SuspendLayout();
+            this.PriceRangeBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.priceTo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.priceFrom)).BeginInit();
             this.SuspendLayout();
             // 
             // tablegrid
@@ -145,6 +146,7 @@
             this.ControlPanel.AutoScroll = true;
             this.ControlPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ControlPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ControlPanel.Controls.Add(this.testForm);
             this.ControlPanel.Controls.Add(this.SearchField);
             this.ControlPanel.Controls.Add(this.dateRange);
             this.ControlPanel.Controls.Add(this.weightRange);
@@ -159,78 +161,59 @@
             this.ControlPanel.Size = new System.Drawing.Size(223, 681);
             this.ControlPanel.TabIndex = 5;
             // 
-            // cbMakers
+            // SearchField
             // 
-            this.cbMakers.FormattingEnabled = true;
-            this.cbMakers.Location = new System.Drawing.Point(6, 141);
-            this.cbMakers.Name = "cbMakers";
-            this.cbMakers.Size = new System.Drawing.Size(212, 94);
-            this.cbMakers.TabIndex = 5;
+            this.SearchField.Location = new System.Drawing.Point(6, 11);
+            this.SearchField.Name = "SearchField";
+            this.SearchField.Size = new System.Drawing.Size(212, 20);
+            this.SearchField.TabIndex = 7;
             // 
-            // PriceRangeBox
+            // dateRange
             // 
-            this.PriceRangeBox.Controls.Add(this.label2);
-            this.PriceRangeBox.Controls.Add(this.label1);
-            this.PriceRangeBox.Controls.Add(this.priceTo);
-            this.PriceRangeBox.Controls.Add(this.priceFrom);
-            this.PriceRangeBox.Location = new System.Drawing.Point(6, 241);
-            this.PriceRangeBox.Name = "PriceRangeBox";
-            this.PriceRangeBox.Size = new System.Drawing.Size(212, 71);
-            this.PriceRangeBox.TabIndex = 6;
-            this.PriceRangeBox.TabStop = false;
-            this.PriceRangeBox.Text = "Price range";
+            this.dateRange.Controls.Add(this.dateFrom);
+            this.dateRange.Controls.Add(this.dateTo);
+            this.dateRange.Controls.Add(this.label5);
+            this.dateRange.Controls.Add(this.label6);
+            this.dateRange.Location = new System.Drawing.Point(6, 395);
+            this.dateRange.Name = "dateRange";
+            this.dateRange.Size = new System.Drawing.Size(212, 71);
+            this.dateRange.TabIndex = 6;
+            this.dateRange.TabStop = false;
+            this.dateRange.Text = "Date range";
             // 
-            // priceFrom
+            // dateFrom
             // 
-            this.priceFrom.DecimalPlaces = 2;
-            this.priceFrom.Location = new System.Drawing.Point(82, 19);
-            this.priceFrom.Maximum = new decimal(new int[] {
-            100000000,
-            0,
-            0,
-            0});
-            this.priceFrom.Name = "priceFrom";
-            this.priceFrom.Size = new System.Drawing.Size(120, 20);
-            this.priceFrom.TabIndex = 0;
+            this.dateFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateFrom.Location = new System.Drawing.Point(82, 18);
+            this.dateFrom.Name = "dateFrom";
+            this.dateFrom.Size = new System.Drawing.Size(120, 20);
+            this.dateFrom.TabIndex = 3;
             // 
-            // priceTo
+            // dateTo
             // 
-            this.priceTo.DecimalPlaces = 2;
-            this.priceTo.Location = new System.Drawing.Point(82, 45);
-            this.priceTo.Maximum = new decimal(new int[] {
-            100000000,
-            0,
-            0,
-            0});
-            this.priceTo.Name = "priceTo";
-            this.priceTo.Size = new System.Drawing.Size(120, 20);
-            this.priceTo.TabIndex = 0;
+            this.dateTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTo.Location = new System.Drawing.Point(82, 45);
+            this.dateTo.Name = "dateTo";
+            this.dateTo.Size = new System.Drawing.Size(120, 20);
+            this.dateTo.TabIndex = 3;
             // 
-            // label1
+            // label5
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "From";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(22, 47);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(20, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "To";
             // 
-            // label2
+            // label6
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 47);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "To";
-            // 
-            // cbType
-            // 
-            this.cbType.FormattingEnabled = true;
-            this.cbType.Location = new System.Drawing.Point(6, 41);
-            this.cbType.Name = "cbType";
-            this.cbType.Size = new System.Drawing.Size(212, 94);
-            this.cbType.TabIndex = 5;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(22, 25);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(30, 13);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "From";
             // 
             // weightRange
             // 
@@ -287,59 +270,87 @@
             this.wheightFrom.Size = new System.Drawing.Size(120, 20);
             this.wheightFrom.TabIndex = 0;
             // 
-            // SearchField
+            // PriceRangeBox
             // 
-            this.SearchField.Location = new System.Drawing.Point(6, 11);
-            this.SearchField.Name = "SearchField";
-            this.SearchField.Size = new System.Drawing.Size(212, 20);
-            this.SearchField.TabIndex = 7;
+            this.PriceRangeBox.Controls.Add(this.label2);
+            this.PriceRangeBox.Controls.Add(this.label1);
+            this.PriceRangeBox.Controls.Add(this.priceTo);
+            this.PriceRangeBox.Controls.Add(this.priceFrom);
+            this.PriceRangeBox.Location = new System.Drawing.Point(6, 241);
+            this.PriceRangeBox.Name = "PriceRangeBox";
+            this.PriceRangeBox.Size = new System.Drawing.Size(212, 71);
+            this.PriceRangeBox.TabIndex = 6;
+            this.PriceRangeBox.TabStop = false;
+            this.PriceRangeBox.Text = "Price range";
             // 
-            // dateRange
+            // label2
             // 
-            this.dateRange.Controls.Add(this.dateFrom);
-            this.dateRange.Controls.Add(this.dateTo);
-            this.dateRange.Controls.Add(this.label5);
-            this.dateRange.Controls.Add(this.label6);
-            this.dateRange.Location = new System.Drawing.Point(6, 395);
-            this.dateRange.Name = "dateRange";
-            this.dateRange.Size = new System.Drawing.Size(212, 71);
-            this.dateRange.TabIndex = 6;
-            this.dateRange.TabStop = false;
-            this.dateRange.Text = "Date range";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(22, 47);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(20, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "To";
             // 
-            // label5
+            // label1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(22, 47);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(20, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "To";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(22, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(30, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "From";
             // 
-            // label6
+            // priceTo
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(22, 25);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(30, 13);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "From";
+            this.priceTo.DecimalPlaces = 2;
+            this.priceTo.Location = new System.Drawing.Point(82, 45);
+            this.priceTo.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.priceTo.Name = "priceTo";
+            this.priceTo.Size = new System.Drawing.Size(120, 20);
+            this.priceTo.TabIndex = 0;
             // 
-            // dateTo
+            // priceFrom
             // 
-            this.dateTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTo.Location = new System.Drawing.Point(82, 45);
-            this.dateTo.Name = "dateTo";
-            this.dateTo.Size = new System.Drawing.Size(120, 20);
-            this.dateTo.TabIndex = 3;
+            this.priceFrom.DecimalPlaces = 2;
+            this.priceFrom.Location = new System.Drawing.Point(82, 19);
+            this.priceFrom.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.priceFrom.Name = "priceFrom";
+            this.priceFrom.Size = new System.Drawing.Size(120, 20);
+            this.priceFrom.TabIndex = 0;
             // 
-            // dateFrom
+            // cbType
             // 
-            this.dateFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateFrom.Location = new System.Drawing.Point(82, 18);
-            this.dateFrom.Name = "dateFrom";
-            this.dateFrom.Size = new System.Drawing.Size(120, 20);
-            this.dateFrom.TabIndex = 3;
+            this.cbType.FormattingEnabled = true;
+            this.cbType.Location = new System.Drawing.Point(6, 41);
+            this.cbType.Name = "cbType";
+            this.cbType.Size = new System.Drawing.Size(212, 94);
+            this.cbType.TabIndex = 5;
+            // 
+            // cbMakers
+            // 
+            this.cbMakers.FormattingEnabled = true;
+            this.cbMakers.Location = new System.Drawing.Point(6, 141);
+            this.cbMakers.Name = "cbMakers";
+            this.cbMakers.Size = new System.Drawing.Size(212, 94);
+            this.cbMakers.TabIndex = 5;
+            // 
+            // testForm
+            // 
+            this.testForm.Location = new System.Drawing.Point(6, 624);
+            this.testForm.Name = "testForm";
+            this.testForm.Size = new System.Drawing.Size(75, 23);
+            this.testForm.TabIndex = 8;
+            this.testForm.Text = "ToItemForm";
+            this.testForm.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -360,16 +371,16 @@
             this.output.ResumeLayout(false);
             this.ControlPanel.ResumeLayout(false);
             this.ControlPanel.PerformLayout();
-            this.PriceRangeBox.ResumeLayout(false);
-            this.PriceRangeBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.priceFrom)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.priceTo)).EndInit();
+            this.dateRange.ResumeLayout(false);
+            this.dateRange.PerformLayout();
             this.weightRange.ResumeLayout(false);
             this.weightRange.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.weightTo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wheightFrom)).EndInit();
-            this.dateRange.ResumeLayout(false);
-            this.dateRange.PerformLayout();
+            this.PriceRangeBox.ResumeLayout(false);
+            this.PriceRangeBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.priceTo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.priceFrom)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -402,6 +413,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckedListBox cbType;
+        private System.Windows.Forms.Button testForm;
     }
 }
 

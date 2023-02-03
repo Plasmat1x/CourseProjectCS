@@ -18,13 +18,12 @@ namespace CourseProject
 { 
     public partial class MainForm : Form
     {
-        AppDbContext context;
+        AppDbContext context = new AppDbContext();
         Model.Item current;
         public MainForm()
         {
-            InitializeComponent();
+            InitializeComponent();     
             initElements();
-
             UpdateForm();
         }
 
@@ -32,6 +31,12 @@ namespace CourseProject
         {
             btAddItem.Click += addItem;
             ItemsGrid.SelectionChanged += ItemsGrid_SelectionChanged;
+
+            foreach (var i in context.Types)
+                cbType.Items.Add(i.Name);
+
+            foreach (var i in context.Makers)
+                cbMakers.Items.Add(i.Name);
         }
 
         private void addItem(object sender, EventArgs e)

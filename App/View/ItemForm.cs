@@ -23,7 +23,8 @@ namespace CourseProject.View
         {
             InitializeComponent();
 
-            current = context.Items.FirstOrDefault(i => i.Id == item.Id);
+            if(item != null)
+                current = context.Items.FirstOrDefault(i => i.Id == item.Id);
 
             if (current == null)
                 btDeleteItem.Enabled = false;

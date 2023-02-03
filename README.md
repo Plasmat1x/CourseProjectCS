@@ -55,6 +55,6 @@ Made by Mikhail Mryasov (damaghack@gmail.com)
 
 ## Визуализация
 
-![Screenshot](resources/MainWindow.png)
+![Screenshot](resources/main.png)
 ![Screenshot](resources/NewItemForm.png)
 ![Screenshot](resources/newTypeForm.png)

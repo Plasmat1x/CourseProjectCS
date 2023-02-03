@@ -57,3 +57,4 @@ Made by Mikhail Mryasov (damaghack@gmail.com)
 
 ![Screenshot](resources/MainWindow.png)
 ![Screenshot](resources/NewItemForm.png)
+![Screenshot](resources/newTypeForm.png)

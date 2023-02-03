@@ -48,10 +48,12 @@ Made by Mikhail Mryasov (damaghack@gmail.com)
 * [ ] Найти среднюю стоимость электроприборов, проданных за определенный промежуток времени (ввод интервала).
 * [ ] Найти все электроприборы, чья стоимость выше, чем средняя стоимость электроприборов заданного производителя.
 
-## Диаграмма
+## Диаграммы
 
 ![Diagram](resources/UML.drawio.svg)
+![Diagram](resources/FormsRelations.drawio.svg)
 
 ## Визуализация
 
 ![Screenshot](resources/MainWindow.png)
+![Screenshot](resources/NewItemForm.png)

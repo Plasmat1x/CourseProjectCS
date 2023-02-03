@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tablegrid = new System.Windows.Forms.DataGridView();
             this.sort = new System.Windows.Forms.GroupBox();
             this.rbDescening = new System.Windows.Forms.RadioButton();
             this.rbAscending = new System.Windows.Forms.RadioButton();
@@ -54,8 +53,11 @@
             this.priceFrom = new System.Windows.Forms.NumericUpDown();
             this.cbType = new System.Windows.Forms.CheckedListBox();
             this.cbMakers = new System.Windows.Forms.CheckedListBox();
-            this.testForm = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.tablegrid)).BeginInit();
+            this.btAddItem = new System.Windows.Forms.Button();
+            this.btInspectItem = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.ItemPanel = new System.Windows.Forms.Panel();
+            this.ItemsGrid = new System.Windows.Forms.DataGridView();
             this.sort.SuspendLayout();
             this.output.SuspendLayout();
             this.ControlPanel.SuspendLayout();
@@ -66,16 +68,9 @@
             this.PriceRangeBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.priceTo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.priceFrom)).BeginInit();
+            this.ItemPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemsGrid)).BeginInit();
             this.SuspendLayout();
-            // 
-            // tablegrid
-            // 
-            this.tablegrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tablegrid.Dock = System.Windows.Forms.DockStyle.Left;
-            this.tablegrid.Location = new System.Drawing.Point(0, 0);
-            this.tablegrid.Name = "tablegrid";
-            this.tablegrid.Size = new System.Drawing.Size(1042, 681);
-            this.tablegrid.TabIndex = 0;
             // 
             // sort
             // 
@@ -113,7 +108,7 @@
             // 
             // showBT
             // 
-            this.showBT.Location = new System.Drawing.Point(6, 653);
+            this.showBT.Location = new System.Drawing.Point(6, 637);
             this.showBT.Name = "showBT";
             this.showBT.Size = new System.Drawing.Size(212, 23);
             this.showBT.TabIndex = 2;
@@ -146,7 +141,9 @@
             this.ControlPanel.AutoScroll = true;
             this.ControlPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ControlPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ControlPanel.Controls.Add(this.testForm);
+            this.ControlPanel.Controls.Add(this.label7);
+            this.ControlPanel.Controls.Add(this.btInspectItem);
+            this.ControlPanel.Controls.Add(this.btAddItem);
             this.ControlPanel.Controls.Add(this.SearchField);
             this.ControlPanel.Controls.Add(this.dateRange);
             this.ControlPanel.Controls.Add(this.weightRange);
@@ -156,16 +153,16 @@
             this.ControlPanel.Controls.Add(this.showBT);
             this.ControlPanel.Controls.Add(this.output);
             this.ControlPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ControlPanel.Location = new System.Drawing.Point(1041, 0);
+            this.ControlPanel.Location = new System.Drawing.Point(1006, 0);
             this.ControlPanel.Name = "ControlPanel";
-            this.ControlPanel.Size = new System.Drawing.Size(223, 681);
+            this.ControlPanel.Size = new System.Drawing.Size(252, 681);
             this.ControlPanel.TabIndex = 5;
             // 
             // SearchField
             // 
-            this.SearchField.Location = new System.Drawing.Point(6, 11);
+            this.SearchField.Location = new System.Drawing.Point(42, 11);
             this.SearchField.Name = "SearchField";
-            this.SearchField.Size = new System.Drawing.Size(212, 20);
+            this.SearchField.Size = new System.Drawing.Size(176, 20);
             this.SearchField.TabIndex = 7;
             // 
             // dateRange
@@ -343,29 +340,71 @@
             this.cbMakers.Size = new System.Drawing.Size(212, 94);
             this.cbMakers.TabIndex = 5;
             // 
-            // testForm
+            // btAddItem
             // 
-            this.testForm.Location = new System.Drawing.Point(6, 624);
-            this.testForm.Name = "testForm";
-            this.testForm.Size = new System.Drawing.Size(75, 23);
-            this.testForm.TabIndex = 8;
-            this.testForm.Text = "ToItemForm";
-            this.testForm.UseVisualStyleBackColor = true;
+            this.btAddItem.Location = new System.Drawing.Point(123, 667);
+            this.btAddItem.Name = "btAddItem";
+            this.btAddItem.Size = new System.Drawing.Size(95, 23);
+            this.btAddItem.TabIndex = 8;
+            this.btAddItem.Text = "Add new item";
+            this.btAddItem.UseVisualStyleBackColor = true;
+            // 
+            // btInspectItem
+            // 
+            this.btInspectItem.Location = new System.Drawing.Point(5, 666);
+            this.btInspectItem.Name = "btInspectItem";
+            this.btInspectItem.Size = new System.Drawing.Size(95, 23);
+            this.btInspectItem.TabIndex = 9;
+            this.btInspectItem.Text = "Incpect / modify";
+            this.btInspectItem.UseVisualStyleBackColor = true;
+            this.btInspectItem.Click += new System.EventHandler(this.btInspectItem_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 14);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(33, 13);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "name";
+            // 
+            // ItemPanel
+            // 
+            this.ItemPanel.AutoScroll = true;
+            this.ItemPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ItemPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ItemPanel.Controls.Add(this.ItemsGrid);
+            this.ItemPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ItemPanel.Location = new System.Drawing.Point(0, 0);
+            this.ItemPanel.Name = "ItemPanel";
+            this.ItemPanel.Size = new System.Drawing.Size(1006, 681);
+            this.ItemPanel.TabIndex = 6;
+            // 
+            // ItemsGrid
+            // 
+            this.ItemsGrid.AllowUserToAddRows = false;
+            this.ItemsGrid.AllowUserToDeleteRows = false;
+            this.ItemsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ItemsGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ItemsGrid.Location = new System.Drawing.Point(0, 0);
+            this.ItemsGrid.MultiSelect = false;
+            this.ItemsGrid.Name = "ItemsGrid";
+            this.ItemsGrid.Size = new System.Drawing.Size(1004, 679);
+            this.ItemsGrid.TabIndex = 0;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1258, 681);
+            this.Controls.Add(this.ItemPanel);
             this.Controls.Add(this.ControlPanel);
-            this.Controls.Add(this.tablegrid);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "MainForm";
-            ((System.ComponentModel.ISupportInitialize)(this.tablegrid)).EndInit();
             this.sort.ResumeLayout(false);
             this.sort.PerformLayout();
             this.output.ResumeLayout(false);
@@ -381,13 +420,13 @@
             this.PriceRangeBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.priceTo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.priceFrom)).EndInit();
+            this.ItemPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ItemsGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView tablegrid;
         private System.Windows.Forms.GroupBox sort;
         private System.Windows.Forms.RadioButton rbDescening;
         private System.Windows.Forms.RadioButton rbAscending;
@@ -413,7 +452,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckedListBox cbType;
-        private System.Windows.Forms.Button testForm;
+        private System.Windows.Forms.Button btAddItem;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btInspectItem;
+        private System.Windows.Forms.Panel ItemPanel;
+        private System.Windows.Forms.DataGridView ItemsGrid;
     }
 }
 

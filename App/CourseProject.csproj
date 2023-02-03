@@ -63,6 +63,14 @@
     <Compile Include="Migrations\202302021924457_initial.designer.cs">
       <DependentUpon>202302021924457_initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202302031332508_ItemModify.cs" />
+    <Compile Include="Migrations\202302031332508_ItemModify.designer.cs">
+      <DependentUpon>202302031332508_ItemModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302031340213_ItemModify1.cs" />
+    <Compile Include="Migrations\202302031340213_ItemModify1.designer.cs">
+      <DependentUpon>202302031340213_ItemModify1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\AppDbContext.cs" />
     <Compile Include="Model\Country.cs" />
@@ -114,6 +122,12 @@
     <EmbeddedResource Include="Migrations\202302021924457_initial.resx">
       <DependentUpon>202302021924457_initial.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302031332508_ItemModify.resx">
+      <DependentUpon>202302031332508_ItemModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302031340213_ItemModify1.resx">
+      <DependentUpon>202302031340213_ItemModify1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,8 +141,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\tableItemForms\CountryForm.resx">
+      <DependentUpon>CountryForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\tableItemForms\ItemForm.resx">
       <DependentUpon>ItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\tableItemForms\MakerForm.resx">
+      <DependentUpon>MakerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\tableItemForms\TypeForm.resx">
       <DependentUpon>TypeForm.cs</DependentUpon>

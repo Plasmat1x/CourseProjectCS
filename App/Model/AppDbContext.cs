@@ -10,7 +10,7 @@ using System.ComponentModel;
 
 namespace CourseProject.Model
 {
-    /*
+    /* //singleton
     internal class AppDbContext : DbContext
     {
         public static AppDbContext Instance { get => AppDbContextCreate.instance; }
@@ -38,7 +38,7 @@ namespace CourseProject.Model
     }
     //*/
 
-    //*
+    //* //classic
     internal class AppDbContext : DbContext
     {
         public AppDbContext() : base("DefaultConnection") { }

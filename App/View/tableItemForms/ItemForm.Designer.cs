@@ -40,14 +40,16 @@
             this.combType = new System.Windows.Forms.ComboBox();
             this.RealeaseDate = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.tbWeight = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.numPrice = new System.Windows.Forms.NumericUpDown();
             this.ToMakeForm = new System.Windows.Forms.LinkLabel();
             this.ToTypeForm = new System.Windows.Forms.LinkLabel();
             this.btAddItem = new System.Windows.Forms.Button();
+            this.btDeleteItem = new System.Windows.Forms.Button();
+            this.numWeight = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.numPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numWeight)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -152,13 +154,6 @@
             this.label6.TabIndex = 2;
             this.label6.Text = "Release";
             // 
-            // tbWeight
-            // 
-            this.tbWeight.Location = new System.Drawing.Point(64, 164);
-            this.tbWeight.Name = "tbWeight";
-            this.tbWeight.Size = new System.Drawing.Size(121, 20);
-            this.tbWeight.TabIndex = 6;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -214,7 +209,7 @@
             // 
             // btAddItem
             // 
-            this.btAddItem.Location = new System.Drawing.Point(95, 216);
+            this.btAddItem.Location = new System.Drawing.Point(15, 216);
             this.btAddItem.Name = "btAddItem";
             this.btAddItem.Size = new System.Drawing.Size(75, 23);
             this.btAddItem.TabIndex = 11;
@@ -222,18 +217,41 @@
             this.btAddItem.UseVisualStyleBackColor = true;
             this.btAddItem.Click += new System.EventHandler(this.btAddItem_Click);
             // 
+            // btDeleteItem
+            // 
+            this.btDeleteItem.Location = new System.Drawing.Point(96, 216);
+            this.btDeleteItem.Name = "btDeleteItem";
+            this.btDeleteItem.Size = new System.Drawing.Size(75, 23);
+            this.btDeleteItem.TabIndex = 12;
+            this.btDeleteItem.Text = "Delete";
+            this.btDeleteItem.UseVisualStyleBackColor = true;
+            this.btDeleteItem.Click += new System.EventHandler(this.btDeleteItem_Click);
+            // 
+            // numWeight
+            // 
+            this.numWeight.Location = new System.Drawing.Point(65, 164);
+            this.numWeight.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
+            this.numWeight.Name = "numWeight";
+            this.numWeight.Size = new System.Drawing.Size(120, 20);
+            this.numWeight.TabIndex = 13;
+            // 
             // ItemForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(283, 243);
+            this.Controls.Add(this.numWeight);
+            this.Controls.Add(this.btDeleteItem);
             this.Controls.Add(this.btAddItem);
             this.Controls.Add(this.ToTypeForm);
             this.Controls.Add(this.ToMakeForm);
             this.Controls.Add(this.numPrice);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.tbWeight);
             this.Controls.Add(this.RealeaseDate);
             this.Controls.Add(this.combType);
             this.Controls.Add(this.label6);
@@ -252,6 +270,7 @@
             this.Name = "ItemForm";
             this.Text = "NewItem";
             ((System.ComponentModel.ISupportInitialize)(this.numPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numWeight)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,12 +290,13 @@
         private System.Windows.Forms.ComboBox combType;
         private System.Windows.Forms.DateTimePicker RealeaseDate;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox tbWeight;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.NumericUpDown numPrice;
         private System.Windows.Forms.LinkLabel ToMakeForm;
         private System.Windows.Forms.LinkLabel ToTypeForm;
         private System.Windows.Forms.Button btAddItem;
+        private System.Windows.Forms.Button btDeleteItem;
+        private System.Windows.Forms.NumericUpDown numWeight;
     }
 }

@@ -65,6 +65,7 @@
             this.priceFrom = new System.Windows.Forms.NumericUpDown();
             this.ItemPanel = new System.Windows.Forms.Panel();
             this.ItemsGrid = new System.Windows.Forms.DataGridView();
+            this.test = new System.Windows.Forms.Button();
             this.sort.SuspendLayout();
             this.output.SuspendLayout();
             this.ControlPanel.SuspendLayout();
@@ -150,6 +151,7 @@
             this.ControlPanel.AutoScroll = true;
             this.ControlPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ControlPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ControlPanel.Controls.Add(this.test);
             this.ControlPanel.Controls.Add(this.groupBox2);
             this.ControlPanel.Controls.Add(this.groupBox1);
             this.ControlPanel.Controls.Add(this.label7);
@@ -477,6 +479,15 @@
             this.ItemsGrid.Size = new System.Drawing.Size(1004, 679);
             this.ItemsGrid.TabIndex = 0;
             // 
+            // test
+            // 
+            this.test.Location = new System.Drawing.Point(5, 658);
+            this.test.Name = "test";
+            this.test.Size = new System.Drawing.Size(75, 23);
+            this.test.TabIndex = 13;
+            this.test.Text = "button1";
+            this.test.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -553,6 +564,7 @@
         private System.Windows.Forms.CheckBox cbDateGroup;
         private System.Windows.Forms.CheckBox cbWeightGroup;
         private System.Windows.Forms.CheckBox cbPriceGroup;
+        private System.Windows.Forms.Button test;
     }
 }
 

@@ -71,6 +71,10 @@
     <Compile Include="Migrations\202302031340213_ItemModify1.designer.cs">
       <DependentUpon>202302031340213_ItemModify1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202302032111201_MakerTypeUpdate.cs" />
+    <Compile Include="Migrations\202302032111201_MakerTypeUpdate.designer.cs">
+      <DependentUpon>202302032111201_MakerTypeUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\AppDbContext.cs" />
     <Compile Include="Model\Country.cs" />
@@ -127,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202302031340213_ItemModify1.resx">
       <DependentUpon>202302031340213_ItemModify1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302032111201_MakerTypeUpdate.resx">
+      <DependentUpon>202302032111201_MakerTypeUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

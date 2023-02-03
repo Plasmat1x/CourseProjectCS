@@ -26,8 +26,14 @@ namespace CourseProject.View
             if(item != null)
                 current = context.Items.FirstOrDefault(i => i.Id == item.Id);
 
+            UpdateComb();
+
             if (current == null)
+            {
                 btDeleteItem.Enabled = false;
+                combMaker.SelectedIndex = 0;
+                combType.SelectedIndex = 0;
+            }  
             else
             {
                 UpdateForm();
@@ -35,29 +41,20 @@ namespace CourseProject.View
             }
 
 
-            foreach(var i in context.Makers)
-            {
-                combMaker.Items.Add(i.Name);
-            }
-            combMaker.SelectedIndex = 0;
-
-            foreach (var i in context.Types)
-            {
-                combType.Items.Add(i.Name);
-            }
-            combType.SelectedIndex = 0;
         }
 
         private void ToMakerForm_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MakerForm makerform = new MakerForm();
             makerform.ShowDialog();
+            UpdateComb();
         }
 
         private void ToTypeForm_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             TypeForm typeform = new TypeForm();
             typeform.ShowDialog();
+            UpdateComb();
         }
 
         private void btAddItem_Click(object sender, EventArgs e)
@@ -105,6 +102,22 @@ namespace CourseProject.View
             RealeaseDate.Value = current.Release;
             numWeight.Value = current.Weight;
             numPrice.Value = current.Price;
+        }
+
+        private void UpdateComb()
+        {
+            combMaker.Items.Clear();
+            combType.Items.Clear();
+
+            foreach (var i in context.Makers)
+            {
+                combMaker.Items.Add(i.Name);
+            }
+
+            foreach (var i in context.Types)
+            {
+                combType.Items.Add(i.Name);
+            }
         }
     }
 }

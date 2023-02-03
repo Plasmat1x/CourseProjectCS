@@ -11,6 +11,11 @@ namespace CourseProject.Model
         public int Id { get; set; }
         public string Name { get; set; }
 
-        //public virtual ICollection<Item> Items { get; set; }
+        public IEnumerable<Model.Item> items = new List<Model.Item>();
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

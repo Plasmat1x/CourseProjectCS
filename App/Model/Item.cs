@@ -17,10 +17,5 @@ namespace CourseProject.Model
         public int Weight { get; set; }
         public DateTime Release { get; set; }
         public decimal Price { get; set; }
-
-        //public virtual ICollection<ItemCountry> ItemCountries { get; set; }
-
-        //public virtual ICollection<Selling> Sellings { get; set; }
-
     }
 }

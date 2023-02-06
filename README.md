@@ -22,9 +22,9 @@ Made by Mikhail Mryasov (damaghack@gmail.com)
 Задание Основная база данных «Электроприборы».
 Предусмотреть:
 
-* ввод данных
-* редактирование
-* просмотр данных.
+* [x] ввод данных
+* [x] редактирование
+* [x] просмотр данных.
 
 Реализовать с использованием нескольких таблиц следующие типы запросов:
 
@@ -50,11 +50,11 @@ Made by Mikhail Mryasov (damaghack@gmail.com)
 
 ## Диаграммы
 
-![Diagram](resources/UML.drawio.svg)
-![Diagram](resources/FormsRelations.drawio.svg)
+![Diagram](resources/diagrams/UML.drawio.svg)
+![Diagram](resources/diagrams/FormsRelations.drawio.svg)
 
 ## Визуализация
 
-![Screenshot](resources/main.png)
-![Screenshot](resources/NewItemForm.png)
-![Screenshot](resources/newTypeForm.png)
+![Screenshot](resources/images/main.png)
+![Screenshot](resources/images/NewItemForm.png)
+![Screenshot](resources/images/newTypeForm.png)

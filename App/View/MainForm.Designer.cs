@@ -35,6 +35,7 @@
             this.categoryCB = new System.Windows.Forms.ComboBox();
             this.output = new System.Windows.Forms.GroupBox();
             this.ControlPanel = new System.Windows.Forms.Panel();
+            this.test = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cbTypesGroup = new System.Windows.Forms.CheckBox();
             this.cbType = new System.Windows.Forms.CheckedListBox();
@@ -56,7 +57,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.weightTo = new System.Windows.Forms.NumericUpDown();
-            this.wheightFrom = new System.Windows.Forms.NumericUpDown();
+            this.weightFrom = new System.Windows.Forms.NumericUpDown();
             this.PriceRangeBox = new System.Windows.Forms.GroupBox();
             this.cbPriceGroup = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -65,7 +66,6 @@
             this.priceFrom = new System.Windows.Forms.NumericUpDown();
             this.ItemPanel = new System.Windows.Forms.Panel();
             this.ItemsGrid = new System.Windows.Forms.DataGridView();
-            this.test = new System.Windows.Forms.Button();
             this.sort.SuspendLayout();
             this.output.SuspendLayout();
             this.ControlPanel.SuspendLayout();
@@ -74,7 +74,7 @@
             this.dateRange.SuspendLayout();
             this.weightRange.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.weightTo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wheightFrom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.weightFrom)).BeginInit();
             this.PriceRangeBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.priceTo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.priceFrom)).BeginInit();
@@ -129,9 +129,9 @@
             // 
             this.categoryCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.categoryCB.FormattingEnabled = true;
-            this.categoryCB.Location = new System.Drawing.Point(6, 19);
+            this.categoryCB.Location = new System.Drawing.Point(5, 19);
             this.categoryCB.Name = "categoryCB";
-            this.categoryCB.Size = new System.Drawing.Size(196, 21);
+            this.categoryCB.Size = new System.Drawing.Size(197, 21);
             this.categoryCB.TabIndex = 3;
             // 
             // output
@@ -168,6 +168,15 @@
             this.ControlPanel.Name = "ControlPanel";
             this.ControlPanel.Size = new System.Drawing.Size(252, 681);
             this.ControlPanel.TabIndex = 5;
+            // 
+            // test
+            // 
+            this.test.Location = new System.Drawing.Point(5, 658);
+            this.test.Name = "test";
+            this.test.Size = new System.Drawing.Size(75, 23);
+            this.test.TabIndex = 13;
+            this.test.Text = "button1";
+            this.test.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -329,7 +338,7 @@
             this.weightRange.Controls.Add(this.label3);
             this.weightRange.Controls.Add(this.label4);
             this.weightRange.Controls.Add(this.weightTo);
-            this.weightRange.Controls.Add(this.wheightFrom);
+            this.weightRange.Controls.Add(this.weightFrom);
             this.weightRange.Location = new System.Drawing.Point(7, 374);
             this.weightRange.Name = "weightRange";
             this.weightRange.Size = new System.Drawing.Size(212, 71);
@@ -376,17 +385,17 @@
             this.weightTo.Size = new System.Drawing.Size(120, 20);
             this.weightTo.TabIndex = 0;
             // 
-            // wheightFrom
+            // weightFrom
             // 
-            this.wheightFrom.Location = new System.Drawing.Point(82, 19);
-            this.wheightFrom.Maximum = new decimal(new int[] {
+            this.weightFrom.Location = new System.Drawing.Point(82, 19);
+            this.weightFrom.Maximum = new decimal(new int[] {
             100000000,
             0,
             0,
             0});
-            this.wheightFrom.Name = "wheightFrom";
-            this.wheightFrom.Size = new System.Drawing.Size(120, 20);
-            this.wheightFrom.TabIndex = 0;
+            this.weightFrom.Name = "weightFrom";
+            this.weightFrom.Size = new System.Drawing.Size(120, 20);
+            this.weightFrom.TabIndex = 0;
             // 
             // PriceRangeBox
             // 
@@ -461,10 +470,10 @@
             this.ItemPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ItemPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ItemPanel.Controls.Add(this.ItemsGrid);
-            this.ItemPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ItemPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.ItemPanel.Location = new System.Drawing.Point(0, 0);
             this.ItemPanel.Name = "ItemPanel";
-            this.ItemPanel.Size = new System.Drawing.Size(1006, 681);
+            this.ItemPanel.Size = new System.Drawing.Size(1006, 569);
             this.ItemPanel.TabIndex = 6;
             // 
             // ItemsGrid
@@ -476,17 +485,8 @@
             this.ItemsGrid.Location = new System.Drawing.Point(0, 0);
             this.ItemsGrid.MultiSelect = false;
             this.ItemsGrid.Name = "ItemsGrid";
-            this.ItemsGrid.Size = new System.Drawing.Size(1004, 679);
+            this.ItemsGrid.Size = new System.Drawing.Size(1004, 567);
             this.ItemsGrid.TabIndex = 0;
-            // 
-            // test
-            // 
-            this.test.Location = new System.Drawing.Point(5, 658);
-            this.test.Name = "test";
-            this.test.Size = new System.Drawing.Size(75, 23);
-            this.test.TabIndex = 13;
-            this.test.Text = "button1";
-            this.test.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -515,7 +515,7 @@
             this.weightRange.ResumeLayout(false);
             this.weightRange.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.weightTo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wheightFrom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.weightFrom)).EndInit();
             this.PriceRangeBox.ResumeLayout(false);
             this.PriceRangeBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.priceTo)).EndInit();
@@ -548,7 +548,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown weightTo;
-        private System.Windows.Forms.NumericUpDown wheightFrom;
+        private System.Windows.Forms.NumericUpDown weightFrom;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckedListBox cbType;

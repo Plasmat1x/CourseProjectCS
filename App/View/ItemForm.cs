@@ -118,6 +118,12 @@ namespace CourseProject.View
             {
                 combType.Items.Add(i.Name);
             }
+
+            if(current != null)
+            {
+                combType.SelectedItem = current.Type.Name;
+                combMaker.SelectedItem = current.Maker.Name;
+            }
         }
     }
 }

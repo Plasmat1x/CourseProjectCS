@@ -18,10 +18,10 @@ using System.Data.Entity.Core.Mapping;
 using CourseProject.Controll;
 
 namespace CourseProject
-{ 
+{
     public partial class MainForm : Form
     {
-        Model.Item current;
+        Model.Item current = new Model.Item();
         DBItemsQueryService query;
 
         public MainForm()
@@ -29,23 +29,34 @@ namespace CourseProject
             InitializeComponent();     
             initElements();
 
+            combFieldName.DataSource = current.GetType().GetProperties().ToList();
+            combFieldName.ValueMember = "Name";
+            combFieldName.SelectedIndex = 0;
+
             query = new DBItemsQueryService();
             query.GetItems();
             ItemsGrid.DataSource = query.Target.ToList();
 
-            for (int i = 0; i < ItemsGrid.ColumnCount; i++)
-                categoryCB.Items.Add(ItemsGrid.Columns[i].Name);
-            categoryCB.SelectedIndex = 0;
-
             UpdateCbs();
             UpdateForm();
+
+            buttonTest.Click += (object a, EventArgs b) =>
+            {
+                foreach (var i in checksMakers.CheckedItems)
+                {
+                    //query.Target.
+                }
+            };
         }
 
         private void initElements()
         {
-            btAddItem.Click += addItem;
+            checksMakers.Items.Clear();
+            checksType.Items.Clear();
+
+            buttonAddItem.Click += addItem;
             ItemsGrid.SelectionChanged += ItemsGrid_SelectionChanged;
-            showBT.Click += Show;
+            buttonShowResults.Click += Show;
         }
 
         private void addItem(object sender, EventArgs e)
@@ -72,35 +83,36 @@ namespace CourseProject
 
         private void UpdateForm()
         {
-            if (SearchField.Text.Length != 0)
-                query.GetItemsByName(SearchField.Text);
+            if (nameTextBox.Text.Length != 0)
+                query.GetItemsByName(nameTextBox.Text);
             else
                 query.GetItems();
 
-            if (cbPriceGroup.Checked == true)
+            if (checkPriceGroup.Checked == true)
                 query.GetItemsAtRangeByPrice(priceFrom.Value, priceTo.Value);
-            if (cbWeightGroup.Checked == true)
+            if (checkWeightGroup.Checked == true)
                 query.GetItemsAtRangeByWeight((int)weightFrom.Value, (int)weightTo.Value);
-            if (cbDateGroup.Checked == true)
+            if (checkDateGroup.Checked == true)
                 query.GetItemsAtRangeByDate(dateFrom.Value, dateTo.Value);
-            query.GetItemsOrdered((ItemFields)categoryCB.SelectedIndex, rbDescening.Checked);
+            query.GetItemsOrdered((ItemFields)combFieldName.SelectedIndex, radioDescening.Checked);
 
             ItemsGrid.DataSource = query.Target.ToList();
         }
 
         private void UpdateCbs()
         {
-            cbType.Items.Clear();
+            checksType.Items.Clear();
             foreach (var i in query.Context.Types)
-                cbType.Items.Add(i.Name);
+                checksType.Items.Add(i.Name);
 
-            cbMakers.Items.Clear();
+            checksMakers.Items.Clear();
             foreach (var i in query.Context.Makers)
-                cbMakers.Items.Add(i.Name);
+                checksMakers.Items.Add(i.Name);
         }
 
         private void Show(object sender, EventArgs e)
         {
+            query.GetItems();
             UpdateForm();
         }
     }

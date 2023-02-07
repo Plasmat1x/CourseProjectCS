@@ -37,7 +37,7 @@ namespace CourseProject.Controll
 
         public void GetItemsAtRangeByPrice(decimal f, decimal t)
         {
-            Target = target.Where(x => x.Price >= f && x.Price <= t);
+            target = target.Where(x => x.Price >= f && x.Price <= t);
         }
 
         public void GetItemsAtRangeByDate(DateTime f, DateTime t)
@@ -50,7 +50,7 @@ namespace CourseProject.Controll
             target = target.Where(x => x.Weight >= f && x.Weight <= t);
         }
 
-        public void GetItemsByType(Model.Type t)
+        public void GetItemsByType( Model.Type t)
         {
             target = target.Where(x => x.Type.Id == t.Id);
         }
@@ -62,7 +62,7 @@ namespace CourseProject.Controll
 
         public void GetItemsByName(string n)
         {
-            target = target.Where(x => x.Name == n);
+            target = target.Where(x => x.Name.Contains(n));
         }
 
         public void GetItems()

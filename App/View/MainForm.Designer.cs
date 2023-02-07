@@ -29,37 +29,37 @@
         private void InitializeComponent()
         {
             this.sort = new System.Windows.Forms.GroupBox();
-            this.rbDescening = new System.Windows.Forms.RadioButton();
-            this.rbAscending = new System.Windows.Forms.RadioButton();
-            this.showBT = new System.Windows.Forms.Button();
-            this.categoryCB = new System.Windows.Forms.ComboBox();
+            this.radioDescening = new System.Windows.Forms.RadioButton();
+            this.radioAscending = new System.Windows.Forms.RadioButton();
+            this.buttonShowResults = new System.Windows.Forms.Button();
+            this.combFieldName = new System.Windows.Forms.ComboBox();
             this.output = new System.Windows.Forms.GroupBox();
             this.ControlPanel = new System.Windows.Forms.Panel();
-            this.test = new System.Windows.Forms.Button();
+            this.buttonTest = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cbTypesGroup = new System.Windows.Forms.CheckBox();
-            this.cbType = new System.Windows.Forms.CheckedListBox();
+            this.checkTypesGroup = new System.Windows.Forms.CheckBox();
+            this.checksType = new System.Windows.Forms.CheckedListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbMakersGroup = new System.Windows.Forms.CheckBox();
-            this.cbMakers = new System.Windows.Forms.CheckedListBox();
+            this.checkMakersGroup = new System.Windows.Forms.CheckBox();
+            this.checksMakers = new System.Windows.Forms.CheckedListBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.btInspectItem = new System.Windows.Forms.Button();
-            this.btAddItem = new System.Windows.Forms.Button();
-            this.SearchField = new System.Windows.Forms.TextBox();
+            this.buttonInspectItem = new System.Windows.Forms.Button();
+            this.buttonAddItem = new System.Windows.Forms.Button();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
             this.dateRange = new System.Windows.Forms.GroupBox();
-            this.cbDateGroup = new System.Windows.Forms.CheckBox();
+            this.checkDateGroup = new System.Windows.Forms.CheckBox();
             this.dateFrom = new System.Windows.Forms.DateTimePicker();
             this.dateTo = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.weightRange = new System.Windows.Forms.GroupBox();
-            this.cbWeightGroup = new System.Windows.Forms.CheckBox();
+            this.checkWeightGroup = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.weightTo = new System.Windows.Forms.NumericUpDown();
             this.weightFrom = new System.Windows.Forms.NumericUpDown();
             this.PriceRangeBox = new System.Windows.Forms.GroupBox();
-            this.cbPriceGroup = new System.Windows.Forms.CheckBox();
+            this.checkPriceGroup = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.priceTo = new System.Windows.Forms.NumericUpDown();
@@ -85,8 +85,8 @@
             // sort
             // 
             this.sort.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.sort.Controls.Add(this.rbDescening);
-            this.sort.Controls.Add(this.rbAscending);
+            this.sort.Controls.Add(this.radioDescening);
+            this.sort.Controls.Add(this.radioAscending);
             this.sort.Location = new System.Drawing.Point(6, 48);
             this.sort.Name = "sort";
             this.sort.Size = new System.Drawing.Size(196, 76);
@@ -94,50 +94,50 @@
             this.sort.TabStop = false;
             this.sort.Text = "Order by";
             // 
-            // rbDescening
+            // radioDescening
             // 
-            this.rbDescening.AutoSize = true;
-            this.rbDescening.Location = new System.Drawing.Point(6, 42);
-            this.rbDescening.Name = "rbDescening";
-            this.rbDescening.Size = new System.Drawing.Size(80, 17);
-            this.rbDescening.TabIndex = 1;
-            this.rbDescening.Text = "descending";
-            this.rbDescening.UseVisualStyleBackColor = true;
+            this.radioDescening.AutoSize = true;
+            this.radioDescening.Location = new System.Drawing.Point(6, 42);
+            this.radioDescening.Name = "radioDescening";
+            this.radioDescening.Size = new System.Drawing.Size(80, 17);
+            this.radioDescening.TabIndex = 1;
+            this.radioDescening.Text = "descending";
+            this.radioDescening.UseVisualStyleBackColor = true;
             // 
-            // rbAscending
+            // radioAscending
             // 
-            this.rbAscending.AutoSize = true;
-            this.rbAscending.Checked = true;
-            this.rbAscending.Location = new System.Drawing.Point(6, 19);
-            this.rbAscending.Name = "rbAscending";
-            this.rbAscending.Size = new System.Drawing.Size(74, 17);
-            this.rbAscending.TabIndex = 0;
-            this.rbAscending.TabStop = true;
-            this.rbAscending.Text = "ascengind";
-            this.rbAscending.UseVisualStyleBackColor = true;
+            this.radioAscending.AutoSize = true;
+            this.radioAscending.Checked = true;
+            this.radioAscending.Location = new System.Drawing.Point(6, 19);
+            this.radioAscending.Name = "radioAscending";
+            this.radioAscending.Size = new System.Drawing.Size(74, 17);
+            this.radioAscending.TabIndex = 0;
+            this.radioAscending.TabStop = true;
+            this.radioAscending.Text = "ascengind";
+            this.radioAscending.UseVisualStyleBackColor = true;
             // 
-            // showBT
+            // buttonShowResults
             // 
-            this.showBT.Location = new System.Drawing.Point(6, 687);
-            this.showBT.Name = "showBT";
-            this.showBT.Size = new System.Drawing.Size(212, 23);
-            this.showBT.TabIndex = 2;
-            this.showBT.Text = "Show";
-            this.showBT.UseVisualStyleBackColor = true;
+            this.buttonShowResults.Location = new System.Drawing.Point(6, 687);
+            this.buttonShowResults.Name = "buttonShowResults";
+            this.buttonShowResults.Size = new System.Drawing.Size(212, 23);
+            this.buttonShowResults.TabIndex = 2;
+            this.buttonShowResults.Text = "Show";
+            this.buttonShowResults.UseVisualStyleBackColor = true;
             // 
-            // categoryCB
+            // combFieldName
             // 
-            this.categoryCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.categoryCB.FormattingEnabled = true;
-            this.categoryCB.Location = new System.Drawing.Point(5, 19);
-            this.categoryCB.Name = "categoryCB";
-            this.categoryCB.Size = new System.Drawing.Size(197, 21);
-            this.categoryCB.TabIndex = 3;
+            this.combFieldName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combFieldName.FormattingEnabled = true;
+            this.combFieldName.Location = new System.Drawing.Point(5, 19);
+            this.combFieldName.Name = "combFieldName";
+            this.combFieldName.Size = new System.Drawing.Size(197, 21);
+            this.combFieldName.TabIndex = 3;
             // 
             // output
             // 
             this.output.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.output.Controls.Add(this.categoryCB);
+            this.output.Controls.Add(this.combFieldName);
             this.output.Controls.Add(this.sort);
             this.output.Location = new System.Drawing.Point(7, 528);
             this.output.Name = "output";
@@ -151,17 +151,16 @@
             this.ControlPanel.AutoScroll = true;
             this.ControlPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ControlPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ControlPanel.Controls.Add(this.test);
             this.ControlPanel.Controls.Add(this.groupBox2);
             this.ControlPanel.Controls.Add(this.groupBox1);
             this.ControlPanel.Controls.Add(this.label7);
-            this.ControlPanel.Controls.Add(this.btInspectItem);
-            this.ControlPanel.Controls.Add(this.btAddItem);
-            this.ControlPanel.Controls.Add(this.SearchField);
+            this.ControlPanel.Controls.Add(this.buttonInspectItem);
+            this.ControlPanel.Controls.Add(this.buttonAddItem);
+            this.ControlPanel.Controls.Add(this.nameTextBox);
             this.ControlPanel.Controls.Add(this.dateRange);
             this.ControlPanel.Controls.Add(this.weightRange);
             this.ControlPanel.Controls.Add(this.PriceRangeBox);
-            this.ControlPanel.Controls.Add(this.showBT);
+            this.ControlPanel.Controls.Add(this.buttonShowResults);
             this.ControlPanel.Controls.Add(this.output);
             this.ControlPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.ControlPanel.Location = new System.Drawing.Point(1006, 0);
@@ -169,19 +168,19 @@
             this.ControlPanel.Size = new System.Drawing.Size(252, 681);
             this.ControlPanel.TabIndex = 5;
             // 
-            // test
+            // buttonTest
             // 
-            this.test.Location = new System.Drawing.Point(5, 658);
-            this.test.Name = "test";
-            this.test.Size = new System.Drawing.Size(75, 23);
-            this.test.TabIndex = 13;
-            this.test.Text = "button1";
-            this.test.UseVisualStyleBackColor = true;
+            this.buttonTest.Location = new System.Drawing.Point(12, 646);
+            this.buttonTest.Name = "buttonTest";
+            this.buttonTest.Size = new System.Drawing.Size(75, 23);
+            this.buttonTest.TabIndex = 13;
+            this.buttonTest.Text = "button1";
+            this.buttonTest.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.cbTypesGroup);
-            this.groupBox2.Controls.Add(this.cbType);
+            this.groupBox2.Controls.Add(this.checkTypesGroup);
+            this.groupBox2.Controls.Add(this.checksType);
             this.groupBox2.Location = new System.Drawing.Point(6, 37);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(213, 124);
@@ -189,30 +188,35 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Types";
             // 
-            // cbTypesGroup
+            // checkTypesGroup
             // 
-            this.cbTypesGroup.AutoSize = true;
-            this.cbTypesGroup.Location = new System.Drawing.Point(7, 19);
-            this.cbTypesGroup.Name = "cbTypesGroup";
-            this.cbTypesGroup.Size = new System.Drawing.Size(15, 14);
-            this.cbTypesGroup.TabIndex = 6;
-            this.cbTypesGroup.UseVisualStyleBackColor = true;
+            this.checkTypesGroup.AutoSize = true;
+            this.checkTypesGroup.Location = new System.Drawing.Point(7, 19);
+            this.checkTypesGroup.Name = "checkTypesGroup";
+            this.checkTypesGroup.Size = new System.Drawing.Size(15, 14);
+            this.checkTypesGroup.TabIndex = 6;
+            this.checkTypesGroup.UseVisualStyleBackColor = true;
             // 
-            // cbType
+            // checksType
             // 
-            this.cbType.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.checksType.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbType.FormattingEnabled = true;
-            this.cbType.Location = new System.Drawing.Point(36, 19);
-            this.cbType.Name = "cbType";
-            this.cbType.Size = new System.Drawing.Size(166, 94);
-            this.cbType.TabIndex = 5;
+            this.checksType.FormattingEnabled = true;
+            this.checksType.Items.AddRange(new object[] {
+            "Monitor",
+            "Console",
+            "Smartphone",
+            "Printer"});
+            this.checksType.Location = new System.Drawing.Point(36, 19);
+            this.checksType.Name = "checksType";
+            this.checksType.Size = new System.Drawing.Size(166, 94);
+            this.checksType.TabIndex = 5;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cbMakersGroup);
-            this.groupBox1.Controls.Add(this.cbMakers);
+            this.groupBox1.Controls.Add(this.checkMakersGroup);
+            this.groupBox1.Controls.Add(this.checksMakers);
             this.groupBox1.Location = new System.Drawing.Point(6, 167);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(213, 124);
@@ -220,64 +224,69 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Makers";
             // 
-            // cbMakersGroup
+            // checkMakersGroup
             // 
-            this.cbMakersGroup.AutoSize = true;
-            this.cbMakersGroup.Location = new System.Drawing.Point(6, 19);
-            this.cbMakersGroup.Name = "cbMakersGroup";
-            this.cbMakersGroup.Size = new System.Drawing.Size(15, 14);
-            this.cbMakersGroup.TabIndex = 6;
-            this.cbMakersGroup.UseVisualStyleBackColor = true;
+            this.checkMakersGroup.AutoSize = true;
+            this.checkMakersGroup.Location = new System.Drawing.Point(6, 19);
+            this.checkMakersGroup.Name = "checkMakersGroup";
+            this.checkMakersGroup.Size = new System.Drawing.Size(15, 14);
+            this.checkMakersGroup.TabIndex = 6;
+            this.checkMakersGroup.UseVisualStyleBackColor = true;
             // 
-            // cbMakers
+            // checksMakers
             // 
-            this.cbMakers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.checksMakers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbMakers.FormattingEnabled = true;
-            this.cbMakers.Location = new System.Drawing.Point(36, 19);
-            this.cbMakers.Name = "cbMakers";
-            this.cbMakers.Size = new System.Drawing.Size(166, 94);
-            this.cbMakers.TabIndex = 5;
+            this.checksMakers.FormattingEnabled = true;
+            this.checksMakers.Items.AddRange(new object[] {
+            "Samsung",
+            "Canon",
+            "HP",
+            "Sony"});
+            this.checksMakers.Location = new System.Drawing.Point(36, 19);
+            this.checksMakers.Name = "checksMakers";
+            this.checksMakers.Size = new System.Drawing.Size(166, 94);
+            this.checksMakers.TabIndex = 5;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(3, 14);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(33, 13);
+            this.label7.Size = new System.Drawing.Size(35, 13);
             this.label7.TabIndex = 10;
-            this.label7.Text = "name";
+            this.label7.Text = "Name";
             // 
-            // btInspectItem
+            // buttonInspectItem
             // 
-            this.btInspectItem.Location = new System.Drawing.Point(5, 716);
-            this.btInspectItem.Name = "btInspectItem";
-            this.btInspectItem.Size = new System.Drawing.Size(95, 23);
-            this.btInspectItem.TabIndex = 9;
-            this.btInspectItem.Text = "Incpect / modify";
-            this.btInspectItem.UseVisualStyleBackColor = true;
-            this.btInspectItem.Click += new System.EventHandler(this.btInspectItem_Click);
+            this.buttonInspectItem.Location = new System.Drawing.Point(5, 716);
+            this.buttonInspectItem.Name = "buttonInspectItem";
+            this.buttonInspectItem.Size = new System.Drawing.Size(95, 23);
+            this.buttonInspectItem.TabIndex = 9;
+            this.buttonInspectItem.Text = "Incpect / modify";
+            this.buttonInspectItem.UseVisualStyleBackColor = true;
+            this.buttonInspectItem.Click += new System.EventHandler(this.btInspectItem_Click);
             // 
-            // btAddItem
+            // buttonAddItem
             // 
-            this.btAddItem.Location = new System.Drawing.Point(123, 717);
-            this.btAddItem.Name = "btAddItem";
-            this.btAddItem.Size = new System.Drawing.Size(95, 23);
-            this.btAddItem.TabIndex = 8;
-            this.btAddItem.Text = "Add new item";
-            this.btAddItem.UseVisualStyleBackColor = true;
+            this.buttonAddItem.Location = new System.Drawing.Point(123, 717);
+            this.buttonAddItem.Name = "buttonAddItem";
+            this.buttonAddItem.Size = new System.Drawing.Size(95, 23);
+            this.buttonAddItem.TabIndex = 8;
+            this.buttonAddItem.Text = "Add new item";
+            this.buttonAddItem.UseVisualStyleBackColor = true;
             // 
-            // SearchField
+            // nameTextBox
             // 
-            this.SearchField.Location = new System.Drawing.Point(42, 11);
-            this.SearchField.Name = "SearchField";
-            this.SearchField.Size = new System.Drawing.Size(176, 20);
-            this.SearchField.TabIndex = 7;
+            this.nameTextBox.Location = new System.Drawing.Point(42, 11);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(176, 20);
+            this.nameTextBox.TabIndex = 7;
             // 
             // dateRange
             // 
-            this.dateRange.Controls.Add(this.cbDateGroup);
+            this.dateRange.Controls.Add(this.checkDateGroup);
             this.dateRange.Controls.Add(this.dateFrom);
             this.dateRange.Controls.Add(this.dateTo);
             this.dateRange.Controls.Add(this.label5);
@@ -289,14 +298,14 @@
             this.dateRange.TabStop = false;
             this.dateRange.Text = "Date range";
             // 
-            // cbDateGroup
+            // checkDateGroup
             // 
-            this.cbDateGroup.AutoSize = true;
-            this.cbDateGroup.Location = new System.Drawing.Point(6, 18);
-            this.cbDateGroup.Name = "cbDateGroup";
-            this.cbDateGroup.Size = new System.Drawing.Size(15, 14);
-            this.cbDateGroup.TabIndex = 6;
-            this.cbDateGroup.UseVisualStyleBackColor = true;
+            this.checkDateGroup.AutoSize = true;
+            this.checkDateGroup.Location = new System.Drawing.Point(6, 18);
+            this.checkDateGroup.Name = "checkDateGroup";
+            this.checkDateGroup.Size = new System.Drawing.Size(15, 14);
+            this.checkDateGroup.TabIndex = 6;
+            this.checkDateGroup.UseVisualStyleBackColor = true;
             // 
             // dateFrom
             // 
@@ -334,7 +343,7 @@
             // 
             // weightRange
             // 
-            this.weightRange.Controls.Add(this.cbWeightGroup);
+            this.weightRange.Controls.Add(this.checkWeightGroup);
             this.weightRange.Controls.Add(this.label3);
             this.weightRange.Controls.Add(this.label4);
             this.weightRange.Controls.Add(this.weightTo);
@@ -346,14 +355,14 @@
             this.weightRange.TabStop = false;
             this.weightRange.Text = "Weight range";
             // 
-            // cbWeightGroup
+            // checkWeightGroup
             // 
-            this.cbWeightGroup.AutoSize = true;
-            this.cbWeightGroup.Location = new System.Drawing.Point(5, 19);
-            this.cbWeightGroup.Name = "cbWeightGroup";
-            this.cbWeightGroup.Size = new System.Drawing.Size(15, 14);
-            this.cbWeightGroup.TabIndex = 6;
-            this.cbWeightGroup.UseVisualStyleBackColor = true;
+            this.checkWeightGroup.AutoSize = true;
+            this.checkWeightGroup.Location = new System.Drawing.Point(5, 19);
+            this.checkWeightGroup.Name = "checkWeightGroup";
+            this.checkWeightGroup.Size = new System.Drawing.Size(15, 14);
+            this.checkWeightGroup.TabIndex = 6;
+            this.checkWeightGroup.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -399,7 +408,7 @@
             // 
             // PriceRangeBox
             // 
-            this.PriceRangeBox.Controls.Add(this.cbPriceGroup);
+            this.PriceRangeBox.Controls.Add(this.checkPriceGroup);
             this.PriceRangeBox.Controls.Add(this.label2);
             this.PriceRangeBox.Controls.Add(this.label1);
             this.PriceRangeBox.Controls.Add(this.priceTo);
@@ -411,14 +420,14 @@
             this.PriceRangeBox.TabStop = false;
             this.PriceRangeBox.Text = "Price range";
             // 
-            // cbPriceGroup
+            // checkPriceGroup
             // 
-            this.cbPriceGroup.AutoSize = true;
-            this.cbPriceGroup.Location = new System.Drawing.Point(6, 19);
-            this.cbPriceGroup.Name = "cbPriceGroup";
-            this.cbPriceGroup.Size = new System.Drawing.Size(15, 14);
-            this.cbPriceGroup.TabIndex = 6;
-            this.cbPriceGroup.UseVisualStyleBackColor = true;
+            this.checkPriceGroup.AutoSize = true;
+            this.checkPriceGroup.Location = new System.Drawing.Point(6, 19);
+            this.checkPriceGroup.Name = "checkPriceGroup";
+            this.checkPriceGroup.Size = new System.Drawing.Size(15, 14);
+            this.checkPriceGroup.TabIndex = 6;
+            this.checkPriceGroup.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -493,6 +502,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1258, 681);
+            this.Controls.Add(this.buttonTest);
             this.Controls.Add(this.ItemPanel);
             this.Controls.Add(this.ControlPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -528,17 +538,17 @@
 
         #endregion
         private System.Windows.Forms.GroupBox sort;
-        private System.Windows.Forms.RadioButton rbDescening;
-        private System.Windows.Forms.RadioButton rbAscending;
-        private System.Windows.Forms.Button showBT;
-        private System.Windows.Forms.ComboBox categoryCB;
+        private System.Windows.Forms.RadioButton radioDescening;
+        private System.Windows.Forms.RadioButton radioAscending;
+        private System.Windows.Forms.Button buttonShowResults;
+        private System.Windows.Forms.ComboBox combFieldName;
         private System.Windows.Forms.GroupBox output;
         private System.Windows.Forms.Panel ControlPanel;
         private System.Windows.Forms.GroupBox PriceRangeBox;
         private System.Windows.Forms.NumericUpDown priceTo;
         private System.Windows.Forms.NumericUpDown priceFrom;
-        private System.Windows.Forms.CheckedListBox cbMakers;
-        private System.Windows.Forms.TextBox SearchField;
+        private System.Windows.Forms.CheckedListBox checksMakers;
+        private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.GroupBox dateRange;
         private System.Windows.Forms.DateTimePicker dateFrom;
         private System.Windows.Forms.DateTimePicker dateTo;
@@ -551,20 +561,20 @@
         private System.Windows.Forms.NumericUpDown weightFrom;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckedListBox cbType;
-        private System.Windows.Forms.Button btAddItem;
+        private System.Windows.Forms.CheckedListBox checksType;
+        private System.Windows.Forms.Button buttonAddItem;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btInspectItem;
+        private System.Windows.Forms.Button buttonInspectItem;
         private System.Windows.Forms.Panel ItemPanel;
         private System.Windows.Forms.DataGridView ItemsGrid;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox cbTypesGroup;
-        private System.Windows.Forms.CheckBox cbMakersGroup;
-        private System.Windows.Forms.CheckBox cbDateGroup;
-        private System.Windows.Forms.CheckBox cbWeightGroup;
-        private System.Windows.Forms.CheckBox cbPriceGroup;
-        private System.Windows.Forms.Button test;
+        private System.Windows.Forms.CheckBox checkTypesGroup;
+        private System.Windows.Forms.CheckBox checkMakersGroup;
+        private System.Windows.Forms.CheckBox checkDateGroup;
+        private System.Windows.Forms.CheckBox checkWeightGroup;
+        private System.Windows.Forms.CheckBox checkPriceGroup;
+        private System.Windows.Forms.Button buttonTest;
     }
 }
 

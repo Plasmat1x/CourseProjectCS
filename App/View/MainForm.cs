@@ -68,6 +68,15 @@ namespace CourseProject
 
         }
 
+        private void btStorage_Click(object sender, EventArgs e)
+        {
+            StorageForm storageForm = new StorageForm();
+            if (storageForm.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+        }
+
         private void ItemsGrid_SelectionChanged(object sender, EventArgs e)
         {
             current = ((Model.Item)ItemsGrid.CurrentRow.DataBoundItem);

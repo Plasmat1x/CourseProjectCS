@@ -35,7 +35,6 @@
             this.combFieldName = new System.Windows.Forms.ComboBox();
             this.output = new System.Windows.Forms.GroupBox();
             this.ControlPanel = new System.Windows.Forms.Panel();
-            this.buttonTest = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.checkTypesGroup = new System.Windows.Forms.CheckBox();
             this.checksType = new System.Windows.Forms.CheckedListBox();
@@ -64,6 +63,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.priceTo = new System.Windows.Forms.NumericUpDown();
             this.priceFrom = new System.Windows.Forms.NumericUpDown();
+            this.buttonStorage = new System.Windows.Forms.Button();
             this.ItemPanel = new System.Windows.Forms.Panel();
             this.ItemsGrid = new System.Windows.Forms.DataGridView();
             this.sort.SuspendLayout();
@@ -167,15 +167,6 @@
             this.ControlPanel.Name = "ControlPanel";
             this.ControlPanel.Size = new System.Drawing.Size(252, 681);
             this.ControlPanel.TabIndex = 5;
-            // 
-            // buttonTest
-            // 
-            this.buttonTest.Location = new System.Drawing.Point(12, 646);
-            this.buttonTest.Name = "buttonTest";
-            this.buttonTest.Size = new System.Drawing.Size(75, 23);
-            this.buttonTest.TabIndex = 13;
-            this.buttonTest.Text = "button1";
-            this.buttonTest.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -473,6 +464,16 @@
             this.priceFrom.Size = new System.Drawing.Size(120, 20);
             this.priceFrom.TabIndex = 0;
             // 
+            // buttonStorage
+            // 
+            this.buttonStorage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonStorage.Location = new System.Drawing.Point(12, 646);
+            this.buttonStorage.Name = "buttonStorage";
+            this.buttonStorage.Size = new System.Drawing.Size(75, 23);
+            this.buttonStorage.TabIndex = 13;
+            this.buttonStorage.Text = "Storage";
+            this.buttonStorage.UseVisualStyleBackColor = true;
+            // 
             // ItemPanel
             // 
             this.ItemPanel.AutoScroll = true;
@@ -502,7 +503,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1258, 681);
-            this.Controls.Add(this.buttonTest);
+            this.Controls.Add(this.buttonStorage);
             this.Controls.Add(this.ItemPanel);
             this.Controls.Add(this.ControlPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -574,7 +575,7 @@
         private System.Windows.Forms.CheckBox checkDateGroup;
         private System.Windows.Forms.CheckBox checkWeightGroup;
         private System.Windows.Forms.CheckBox checkPriceGroup;
-        private System.Windows.Forms.Button buttonTest;
+        private System.Windows.Forms.Button buttonStorage;
     }
 }
 

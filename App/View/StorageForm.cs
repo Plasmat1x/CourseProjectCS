@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CourseProject.View
 {
-    public partial class Storage : Form
+    public partial class StorageForm : Form
     {
-        public Storage()
+        public StorageForm()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace CourseProject.View
 {
-    partial class Storage
+    partial class StorageForm
     {
         /// <summary>
         /// Required designer variable.

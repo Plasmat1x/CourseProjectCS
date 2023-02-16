@@ -39,14 +39,6 @@ namespace CourseProject
 
             UpdateCbs();
             UpdateForm();
-
-            buttonTest.Click += (object a, EventArgs b) =>
-            {
-                foreach (var i in checksMakers.CheckedItems)
-                {
-                    //query.Target.
-                }
-            };
         }
 
         private void initElements()
@@ -87,6 +79,12 @@ namespace CourseProject
                 query.GetItemsByName(nameTextBox.Text);
             else
                 query.GetItems();
+
+            if (checkMakersGroup.Checked == true)
+               query.GetItemsByMaker(checksMakers.CheckedItems);
+            if (checkTypesGroup.Checked == true)
+                query.GetItemsByType(checksType.CheckedItems);
+                
 
             if (checkPriceGroup.Checked == true)
                 query.GetItemsAtRangeByPrice(priceFrom.Value, priceTo.Value);

@@ -58,7 +58,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controll\BuisnessLogic.cs" />
     <Compile Include="Controll\DBQueryService.cs" />
     <Compile Include="Migrations\202302021924457_initial.cs" />
     <Compile Include="Migrations\202302021924457_initial.designer.cs">

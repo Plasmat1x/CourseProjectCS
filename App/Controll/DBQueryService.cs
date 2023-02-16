@@ -50,14 +50,42 @@ namespace CourseProject.Controll
             target = target.Where(x => x.Weight >= f && x.Weight <= t);
         }
 
-        public void GetItemsByType( Model.Type t)
+        public void GetItemsByMaker(CheckedListBox.CheckedItemCollection col)
         {
-            target = target.Where(x => x.Type.Id == t.Id);
+            List<Item> res = new List<Item>();
+            List<Maker> makers = context.Makers.ToList();
+
+            foreach(var item in col)
+            {
+                Maker maker = makers.Where(x => x.Name == item.ToString()).FirstOrDefault();
+
+                foreach(var i in target)
+                {
+                    if (i.Maker.Id == maker.Id)
+                        res.Add(i);
+                }
+            }
+
+            target = res;
         }
 
-        public void GetItemsByMaker(Model.Maker m)
+        public void GetItemsByType(CheckedListBox.CheckedItemCollection col)
         {
-            target = target.Where(x => x.Maker.Id == m.Id);
+            List<Item> res = new List<Item>();
+            List<Model.Type> types = context.Types.ToList();
+
+            foreach (var item in col)
+            {
+                Model.Type type = types.Where(x => x.Name == item.ToString()).FirstOrDefault();
+
+                foreach (var i in target)
+                {
+                    if (i.Type.Id == type.Id)
+                        res.Add(i);
+                }
+            }
+
+            target = res;
         }
 
         public void GetItemsByName(string n)

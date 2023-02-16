@@ -16,6 +16,7 @@ using System.Xml.Linq;
 using System.Data.Entity.Infrastructure;
 using System.Data.Entity.Core.Mapping;
 using CourseProject.Controll;
+using CourseProject.View.StorageFrorms;
 
 namespace CourseProject
 {
@@ -49,6 +50,7 @@ namespace CourseProject
             buttonAddItem.Click += addItem;
             ItemsGrid.SelectionChanged += ItemsGrid_SelectionChanged;
             buttonShowResults.Click += Show;
+            buttonStorage.Click += btStorage_Click;
         }
 
         private void addItem(object sender, EventArgs e)

@@ -97,8 +97,10 @@ namespace CourseProject.View
             tbId.Text = current.Id.ToString();
             tbName.Text = current.Name;
             tbModel.Text = current.Model;
-            combMaker.SelectedItem = current.Maker.Name;
-            combType.SelectedItem = current.Type.Name;
+            if(current.Maker != null)
+                combMaker.SelectedItem = current.Maker.Name;
+            if (current.Type != null)
+                combType.SelectedItem = current.Type.Name;
             RealeaseDate.Value = current.Release;
             numWeight.Value = current.Weight;
             numPrice.Value = current.Price;
@@ -121,8 +123,10 @@ namespace CourseProject.View
 
             if(current != null)
             {
-                combType.SelectedItem = current.Type.Name;
-                combMaker.SelectedItem = current.Maker.Name;
+                if (current.Type != null)
+                    combType.SelectedItem = current.Type.Name;
+                if (current.Maker != null)
+                    combMaker.SelectedItem = current.Maker.Name;
             }
         }
     }

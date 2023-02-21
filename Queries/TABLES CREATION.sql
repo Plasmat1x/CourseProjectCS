@@ -1,0 +1,51 @@
+USE CourseProjectCStest;
+
+CREATE TABLE Makers(
+    [Id] INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+    [Name] NVARCHAR(50),
+);
+
+CREATE TABLE Types(
+    [Id] INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+    [Name] NVARCHAR(50),
+);
+
+CREATE TABLE Countries(
+    [Id] INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+    [Name] NVARCHAR(50),
+);
+
+CREATE TABLE Items(
+    [Id] INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+    [Name] NVARCHAR(50),
+    [Model] NVARCHAR(50),
+    [Maker] INT FOREIGN KEY REFERENCES Makers(Id),
+    [Type] INT FOREIGN KEY REFERENCES Types(Id),
+    [Weight] INT,
+    [Release] DATE,
+);
+
+CREATE TABLE Sellings(
+    [Id] INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+    [ItemId] INT FOREIGN KEY REFERENCES Items(Id) NOT NULL,
+    [Date] DATE,
+);
+
+CREATE TABLE Fails(
+    [Id] INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+    [Quantity] INT,
+);
+
+CREATE TABLE Quantities(
+    [Id] INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+    [Quantity] INT,
+)
+
+CREATE TABLE ItemCountry(
+    [ItemId] INT FOREIGN KEY REFERENCES Items(Id) NOT NULL,
+    [CountryId] INT FOREIGN KEY REFERENCES Countries(Id) NOT NULL,
+    [QuantityId] INT FOREIGN KEY REFERENCES Quantities(Id),
+    [FailsId] INT FOREIGN KEY REFERENCES Fails(Id),
+    CONSTRAINT [ItemCountryId] PRIMARY KEY (ItemId, CountryId),
+);
+

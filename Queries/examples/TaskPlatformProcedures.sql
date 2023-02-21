@@ -1,0 +1,56 @@
+use LearnPlatform;
+--select * from students;
+--GO
+--create procedure SelectAllStudentAndGroup
+--AS 
+--select * from Students;
+--select * from Groups;
+
+--drop procedure SelectAllStudentAndGroup;
+--GO
+--create procedure SelectGroup @Id int
+--AS
+--BEGIN
+--select * from Groups
+--where Groups.Id = @Id
+--END;
+--select * from Students;
+--GO
+--create procedure Insert_Student @FirstName nvarchar(50), @SecondName nvarchar(50), @Group_FK int
+--as 
+--BEGIN
+--insert into Students
+--values(@FirstName,@SecondName,@Group_FK)
+--END;
+
+--GO 
+--create trigger Students_Insert_Select
+--ON Students
+--AFTER insert
+--AS
+--select * from Students;
+--Go
+--create trigger Students_Insert_Update
+--ON Students
+--AFTER insert
+--as 
+--UPDATE Students
+--set FirstName += 'SG'
+--where Students.Id = (select Id from inserted);
+--GO
+--create trigger Students_Insert_InsertSubjectStudent
+--on Students
+--after insert
+--as
+--insert into SubjectStudent
+--values((select Id from inserted),(select Group_FK from inserted));
+
+--GO 
+--create trigger Students_Delete_Select
+--on Students
+--instead of delete
+--as
+--select * from Students;
+--print 'Some text'
+
+--drop trigger Students_Delete_Select

@@ -1,4 +1,3 @@
-
 # Запросы T-SQL
 
 ```sql
@@ -31,7 +30,6 @@ AS
 SELECT * FROM Sellings WHERE @d1 <= Sellings.Date and @d2 >= Sellings.Date;
 
 -- Get most popular item
-
 SELECT Items.Id, Items.Name, 
     (SELECT COUNT(*) 
     FROM Sellings 
